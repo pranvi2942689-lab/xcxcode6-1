@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "确认下单",
+  "usingComponents": {
+    "section-title": "../../components/section-title/index",
+    "qty-stepper": "../../components/qty-stepper/index",
+    "ui-button": "../../components/ui-button/index",
+    "empty-state": "../../components/empty-state/index"
+  }
+}

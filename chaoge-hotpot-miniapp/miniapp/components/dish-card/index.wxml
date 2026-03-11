@@ -1,0 +1,29 @@
+<view class="{{rootClass}}">
+  <image class="dish-card__image" src="{{dish.image}}" mode="aspectFill" bindtap="handleViewDetail"></image>
+  <view class="dish-card__body" bindtap="handleViewDetail">
+    <view class="dish-card__head">
+      <text class="dish-card__name">{{dish.name}}</text>
+      <text class="dish-card__subtitle">{{dish.subtitle}}</text>
+    </view>
+    <text class="dish-card__description">{{dish.description}}</text>
+    <view class="dish-card__tags">
+      <text wx:for="{{dish.tags}}" wx:key="*this" class="dish-card__tag">{{item}}</text>
+    </view>
+    <view class="dish-card__footer" catchtap="noop">
+      <view class="dish-card__price-box">
+        <text class="dish-card__currency">¥</text>
+        <text class="dish-card__price">{{dish.price}}</text>
+        <text class="dish-card__unit">/{{dish.unit}}</text>
+      </view>
+      <view class="dish-card__action">
+        <text wx:if="{{dish.isSoldOut}}" class="dish-card__soldout">已售罄</text>
+        <qty-stepper
+          wx:elif="{{showStepper}}"
+          value="{{quantity}}"
+          disabled="{{dish.isSoldOut}}"
+          bind:change="handleQtyChange"
+        />
+      </view>
+    </view>
+  </view>
+</view>

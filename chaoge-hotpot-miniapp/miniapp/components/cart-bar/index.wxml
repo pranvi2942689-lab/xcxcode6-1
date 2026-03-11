@@ -1,0 +1,14 @@
+<view class="cart-bar">
+  <view class="cart-bar__panel">
+    <view class="cart-bar__summary">
+      <text class="cart-bar__label">{{summaryText}}</text>
+      <text class="cart-bar__amount">¥{{amount}}</text>
+    </view>
+    <ui-button
+      text="{{buttonText}}"
+      type="primary"
+      disabled="{{disabled}}"
+      bind:tap="handleSubmit"
+    />
+  </view>
+</view>

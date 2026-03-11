@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/menu/index",
+    "pages/confirm/index",
+    "pages/orders/index",
+    "pages/order-detail/index",
+    "pages/mine/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#0F0F10",
+    "navigationBarTitleText": "潮阁火锅",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0F0F10",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#8E857B",
+    "selectedColor": "#C9A96B",
+    "backgroundColor": "#0F0F10",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "assets/images/tabbar/home.png",
+        "selectedIconPath": "assets/images/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/menu/index",
+        "text": "点餐",
+        "iconPath": "assets/images/tabbar/menu.png",
+        "selectedIconPath": "assets/images/tabbar/menu-active.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "assets/images/tabbar/mine.png",
+        "selectedIconPath": "assets/images/tabbar/mine-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

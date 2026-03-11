@@ -1,0 +1,31 @@
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120rpx;
+  height: 44rpx;
+  padding: 0 18rpx;
+  border-radius: 999rpx;
+  font-size: 20rpx;
+  font-weight: 500;
+}
+
+.status-tag--pending {
+  background: rgba(214, 139, 57, 0.14);
+  color: #d68b39;
+}
+
+.status-tag--confirmed {
+  background: rgba(201, 169, 107, 0.14);
+  color: #c9a96b;
+}
+
+.status-tag--completed {
+  background: rgba(79, 163, 109, 0.14);
+  color: #4fa36d;
+}
+
+.status-tag--canceled {
+  background: rgba(185, 74, 72, 0.14);
+  color: #b94a48;
+}

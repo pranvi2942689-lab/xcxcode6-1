@@ -1,0 +1,82 @@
+<view class="page-shell confirm-page">
+  <view class="page-header">
+    <text class="page-title">确认下单</text>
+    <text class="page-subtitle">本桌信息与已选菜品将在下单后同步入单。</text>
+  </view>
+
+  <block wx:if="{{!cartItems.length}}">
+    <empty-state
+      type="empty"
+      title="还没有选择菜品"
+      description="请先返回菜单页添加锅底和菜品。"
+      buttonText="去点餐"
+      bind:action="goMenu"
+    />
+  </block>
+
+  <block wx:else>
+    <view class="card">
+      <section-title title="已选锅底与菜品" subtitle="可在此继续微调份数" />
+      <view class="confirm-list">
+        <view wx:for="{{cartItems}}" wx:key="dishId" class="confirm-item hairline">
+          <image class="confirm-item__image" src="{{item.image}}" mode="aspectFill"></image>
+          <view class="confirm-item__body">
+            <text class="confirm-item__name">{{item.name}}</text>
+            <text class="confirm-item__price">¥{{item.price}}/{{item.unit}}</text>
+          </view>
+          <qty-stepper
+            value="{{item.quantity}}"
+            min="{{0}}"
+            data-index="{{index}}"
+            bind:change="handleCartQuantityChange"
+          />
+        </view>
+      </view>
+    </view>
+
+    <view class="card section-gap">
+      <section-title title="本桌信息" subtitle="就餐人数与口味备注" />
+      <view class="meta-row section-gap">
+        <view>
+          <text class="card-title">就餐人数</text>
+          <text class="page-subtitle">默认 2 位，可现场调整</text>
+        </view>
+        <qty-stepper value="{{peopleCount}}" min="{{1}}" max="{{20}}" bind:change="handlePeopleCountChange" />
+      </view>
+      <view class="remark-box">
+        <text class="card-title">备注</text>
+        <textarea
+          class="textarea-field section-gap"
+          placeholder="例如：微辣、先上锅底、不要香菜"
+          placeholder-style="color: #8E857B;"
+          maxlength="120"
+          value="{{remark}}"
+          bindinput="handleRemarkInput"
+        ></textarea>
+      </view>
+    </view>
+
+    <view class="card section-gap">
+      <section-title title="金额汇总" subtitle="订单金额由服务端再次校验" />
+      <view class="summary-list">
+        <view class="summary-row">
+          <text class="text-muted">菜品合计</text>
+          <text class="text-body">¥{{totalAmountText}}</text>
+        </view>
+        <view class="summary-row">
+          <text class="text-muted">状态</text>
+          <text class="text-body">提交后为待确认</text>
+        </view>
+      </view>
+      <view wx:if="{{submitError}}" class="submit-error">{{submitError}}</view>
+      <view class="confirm-submit">
+        <ui-button
+          text="提交订单"
+          loading="{{submitting}}"
+          block
+          bind:tap="handleSubmitOrder"
+        />
+      </view>
+    </view>
+  </block>
+</view>

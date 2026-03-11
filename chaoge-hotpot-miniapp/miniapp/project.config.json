@@ -1,0 +1,20 @@
+{
+  "description": "潮阁火锅点餐小程序",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": true,
+    "compileHotReLoad": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.6.1",
+  "appid": "touristappid",
+  "projectname": "chaoge-hotpot-miniapp",
+  "simulatorType": "wechat",
+  "condition": {}
+}

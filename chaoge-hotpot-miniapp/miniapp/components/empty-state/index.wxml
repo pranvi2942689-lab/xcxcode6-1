@@ -1,0 +1,9 @@
+<view class="empty-state">
+  <view class="empty-state__badge">
+    <view wx:if="{{isLoading}}" class="empty-state__spinner"></view>
+    <text wx:else class="empty-state__badge-text">{{iconText}}</text>
+  </view>
+  <text class="empty-state__title">{{resolvedTitle}}</text>
+  <text class="empty-state__description">{{resolvedDescription}}</text>
+  <button wx:if="{{buttonText}}" class="empty-state__button" hover-class="none" bindtap="handleAction">{{buttonText}}</button>
+</view>

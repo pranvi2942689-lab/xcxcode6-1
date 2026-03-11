@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "点餐",
+  "usingComponents": {
+    "section-title": "../../components/section-title/index",
+    "dish-card": "../../components/dish-card/index",
+    "cart-bar": "../../components/cart-bar/index",
+    "empty-state": "../../components/empty-state/index",
+    "qty-stepper": "../../components/qty-stepper/index",
+    "ui-button": "../../components/ui-button/index"
+  }
+}

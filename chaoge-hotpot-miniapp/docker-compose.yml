@@ -1,0 +1,25 @@
+services:
+  backend:
+    build: ./server
+    container_name: chaoge-hotpot-backend
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+    expose:
+      - "3000"
+    volumes:
+      - ./server/data:/app/data
+    restart: always
+
+  nginx:
+    image: nginx:alpine
+    container_name: chaoge-hotpot-nginx
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.example.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./certs:/etc/nginx/certs:ro
+    restart: always

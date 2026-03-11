@@ -1,0 +1,385 @@
+const fs = require('fs/promises');
+const path = require('path');
+
+const dataDir = path.join(__dirname, '..', 'data');
+
+const storeConfig = {
+  storeName: '潮阁火锅',
+  slogan: '以铜火暖席，以山海入锅。',
+  phone: '021-6888-1668',
+  address: '上海市浦东新区陆家嘴环路88号 潮阁火锅一层',
+  businessHours: '11:00 - 22:30',
+  heroImage: '/assets/images/hero/brand-hero.png'
+};
+
+const categories = [
+  { id: 'category-broth', name: '锅底', sort: 1 },
+  { id: 'category-meat', name: '鲜切牛羊', sort: 2 },
+  { id: 'category-signature', name: '招牌涮品', sort: 3 },
+  { id: 'category-vegetable', name: '时蔬豆品', sort: 4 }
+];
+
+const dishes = [
+  {
+    id: 'dish-broth-yupin-butter',
+    categoryId: 'category-broth',
+    name: '潮阁御品牛油锅',
+    subtitle: '层层椒香，铜锅慢润',
+    description: '甄选牛油与郫县豆瓣慢火炼香，辣香厚实，适合搭配毛肚、鸭血与手工虾滑。',
+    price: 68,
+    unit: '份',
+    image: '/assets/images/dishes/broth-butter.png',
+    tags: ['推荐锅底', '浓香牛油'],
+    isRecommend: true,
+    isSoldOut: false,
+    sort: 1
+  },
+  {
+    id: 'dish-broth-mushroom-king',
+    categoryId: 'category-broth',
+    name: '山珍菌皇锅',
+    subtitle: '松露尾韵，清润回甘',
+    description: '以多种山珍菌菇慢熬，汤底温润鲜甜，适合搭配和牛、乌鸡卷与菌菇拼盘。',
+    price: 72,
+    unit: '份',
+    image: '/assets/images/dishes/broth-mushroom.png',
+    tags: ['推荐锅底', '鲜润清汤'],
+    isRecommend: true,
+    isSoldOut: false,
+    sort: 2
+  },
+  {
+    id: 'dish-broth-golden-tomato',
+    categoryId: 'category-broth',
+    name: '金汤番茄锅',
+    subtitle: '酸甜开胃，温和顺口',
+    description: '番茄慢熬出自然酸甜，适合家庭同桌共享，也适合搭配豆腐与青笋片。',
+    price: 62,
+    unit: '份',
+    image: '/assets/images/dishes/broth-clear.png',
+    tags: ['柔和鲜汤'],
+    isRecommend: false,
+    isSoldOut: false,
+    sort: 3
+  },
+  {
+    id: 'dish-broth-chaoshan-bone',
+    categoryId: 'category-broth',
+    name: '潮汕清润骨汤锅',
+    subtitle: '慢熬骨香，落口清澈',
+    description: '猪骨与老鸡长时熬煮，汤色清亮，适合凸显鲜切肉品与蔬菜本味。',
+    price: 58,
+    unit: '份',
+    image: '/assets/images/dishes/broth-clear.png',
+    tags: ['清润本味'],
+    isRecommend: false,
+    isSoldOut: false,
+    sort: 4
+  },
+  {
+    id: 'dish-meat-signature-wagyu',
+    categoryId: 'category-meat',
+    name: '招牌和牛',
+    subtitle: '细雪纹理，入口绵柔',
+    description: '精选和牛肩胛部位，脂香丰盈，建议在菌皇锅中轻涮 8 秒。',
+    price: 98,
+    unit: '份',
+    image: '/assets/images/dishes/meat-wagyu.png',
+    tags: ['推荐', '人气爆款'],
+    isRecommend: true,
+    isSoldOut: false,
+    sort: 5
+  },
+  {
+    id: 'dish-meat-diaolong',
+    categoryId: 'category-meat',
+    name: '手切吊龙',
+    subtitle: '现切上桌，鲜甜脆嫩',
+    description: '潮汕火锅经典部位，肉质细嫩弹牙，搭配骨汤或菌汤更显清鲜。',
+    price: 72,
+    unit: '份',
+    image: '/assets/images/dishes/meat-wagyu.png',
+    tags: ['潮汕经典'],
+    isRecommend: true,
+    isSoldOut: false,
+    sort: 6
+  },
+  {
+    id: 'dish-meat-snow-beef',
+    categoryId: 'category-meat',
+    name: '雪花肥牛',
+    subtitle: '丰润油花，香气充盈',
+    description: '薄切雪花肥牛适合在番茄锅或牛油锅中快涮，层次更丰厚。',
+    price: 64,
+    unit: '份',
+    image: '/assets/images/dishes/meat-wagyu.png',
+    tags: ['限量供应'],
+    isRecommend: false,
+    isSoldOut: true,
+    sort: 7
+  },
+  {
+    id: 'dish-meat-lamb-roll',
+    categoryId: 'category-meat',
+    name: '草原羔羊卷',
+    subtitle: '羊香干净，脂香轻盈',
+    description: '草原羔羊部位切卷成型，适合牛油锅与番茄锅两种风味搭配。',
+    price: 58,
+    unit: '份',
+    image: '/assets/images/dishes/meat-wagyu.png',
+    tags: ['经典肉品'],
+    isRecommend: false,
+    isSoldOut: false,
+    sort: 8
+  },
+  {
+    id: 'dish-signature-maodu',
+    categoryId: 'category-signature',
+    name: '现切毛肚',
+    subtitle: '七上八下，脆爽有声',
+    description: '只取鲜脆毛肚部位，适合牛油锅轻涮 10 秒，口感爽脆利落。',
+    price: 62,
+    unit: '份',
+    image: '/assets/images/dishes/signature-maodu.png',
+    tags: ['招牌', '爽脆口感'],
+    isRecommend: true,
+    isSoldOut: false,
+    sort: 9
+  },
+  {
+    id: 'dish-signature-duck-blood',
+    categoryId: 'category-signature',
+    name: '鲜鸭血',
+    subtitle: '细嫩顺滑，吸味十足',
+    description: '每日新鲜制备，细腻顺滑，适合在牛油锅中稍久煮后吸附汤香。',
+    price: 28,
+    unit: '份',
+    image: '/assets/images/dishes/signature-maodu.png',
+    tags: ['锅底绝配'],
+    isRecommend: false,
+    isSoldOut: false,
+    sort: 10
+  },
+  {
+    id: 'dish-signature-shrimp-paste',
+    categoryId: 'category-signature',
+    name: '手工虾滑',
+    subtitle: '虾肉扎实，落口弹润',
+    description: '手打虾肉占比高，入锅后成型饱满，适合菌皇锅与番茄锅。',
+    price: 46,
+    unit: '份',
+    image: '/assets/images/dishes/signature-shrimp.png',
+    tags: ['高人气'],
+    isRecommend: true,
+    isSoldOut: false,
+    sort: 11
+  },
+  {
+    id: 'dish-signature-black-chicken-roll',
+    categoryId: 'category-signature',
+    name: '乌鸡卷',
+    subtitle: '乌鸡鲜香，质地紧实',
+    description: '乌鸡卷切片后轻涮即可，适合清汤锅底，层次细腻而不失肉香。',
+    price: 42,
+    unit: '份',
+    image: '/assets/images/dishes/signature-maodu.png',
+    tags: ['清润首选'],
+    isRecommend: false,
+    isSoldOut: false,
+    sort: 12
+  },
+  {
+    id: 'dish-vegetable-mushroom-platter',
+    categoryId: 'category-vegetable',
+    name: '菌菇拼盘',
+    subtitle: '多种菌香，鲜感叠加',
+    description: '杏鲍菇、海鲜菇、白玉菇与香菇组合，适合菌皇锅与骨汤锅。',
+    price: 36,
+    unit: '份',
+    image: '/assets/images/dishes/vegetable-mushroom.png',
+    tags: ['鲜香层次'],
+    isRecommend: true,
+    isSoldOut: false,
+    sort: 13
+  },
+  {
+    id: 'dish-vegetable-bamboo-shoot',
+    categoryId: 'category-vegetable',
+    name: '青笋片',
+    subtitle: '脆嫩清新，解腻提鲜',
+    description: '现切青笋薄片，适合作为餐中平衡口感的轻盈选择。',
+    price: 18,
+    unit: '份',
+    image: '/assets/images/dishes/vegetable-mushroom.png',
+    tags: ['清爽解腻'],
+    isRecommend: false,
+    isSoldOut: false,
+    sort: 14
+  },
+  {
+    id: 'dish-vegetable-soft-tofu',
+    categoryId: 'category-vegetable',
+    name: '嫩豆腐',
+    subtitle: '细软入味，汤感饱满',
+    description: '豆香温润，适合番茄锅与骨汤锅，久煮后口感依旧细嫩。',
+    price: 16,
+    unit: '份',
+    image: '/assets/images/dishes/vegetable-mushroom.png',
+    tags: ['清润搭配'],
+    isRecommend: false,
+    isSoldOut: false,
+    sort: 15
+  },
+  {
+    id: 'dish-vegetable-corn-bamboo-pith',
+    categoryId: 'category-vegetable',
+    name: '玉米竹荪拼',
+    subtitle: '清甜爽口，细节收尾',
+    description: '玉米与竹荪组合，适合在清汤锅底中释放自然清甜。',
+    price: 26,
+    unit: '份',
+    image: '/assets/images/dishes/vegetable-mushroom.png',
+    tags: ['清甜鲜蔬'],
+    isRecommend: false,
+    isSoldOut: false,
+    sort: 16
+  }
+];
+
+const orders = [
+  {
+    id: 'order-demo-001',
+    orderNo: 'CG2026030911301001',
+    items: [
+      {
+        dishId: 'dish-broth-yupin-butter',
+        quantity: 1,
+        price: 68,
+        name: '潮阁御品牛油锅',
+        image: '/assets/images/dishes/broth-butter.png',
+        unit: '份'
+      },
+      {
+        dishId: 'dish-signature-maodu',
+        quantity: 1,
+        price: 62,
+        name: '现切毛肚',
+        image: '/assets/images/dishes/signature-maodu.png',
+        unit: '份'
+      },
+      {
+        dishId: 'dish-signature-shrimp-paste',
+        quantity: 1,
+        price: 46,
+        name: '手工虾滑',
+        image: '/assets/images/dishes/signature-shrimp.png',
+        unit: '份'
+      }
+    ],
+    peopleCount: 2,
+    remark: '靠窗安静桌位',
+    totalAmount: 176,
+    status: 'confirmed',
+    createdAt: '2026-03-09T11:30:00.000Z'
+  },
+  {
+    id: 'order-demo-002',
+    orderNo: 'CG2026030819152002',
+    items: [
+      {
+        dishId: 'dish-broth-mushroom-king',
+        quantity: 1,
+        price: 72,
+        name: '山珍菌皇锅',
+        image: '/assets/images/dishes/broth-mushroom.png',
+        unit: '份'
+      },
+      {
+        dishId: 'dish-meat-signature-wagyu',
+        quantity: 1,
+        price: 98,
+        name: '招牌和牛',
+        image: '/assets/images/dishes/meat-wagyu.png',
+        unit: '份'
+      },
+      {
+        dishId: 'dish-vegetable-mushroom-platter',
+        quantity: 1,
+        price: 36,
+        name: '菌菇拼盘',
+        image: '/assets/images/dishes/vegetable-mushroom.png',
+        unit: '份'
+      },
+      {
+        dishId: 'dish-signature-black-chicken-roll',
+        quantity: 1,
+        price: 42,
+        name: '乌鸡卷',
+        image: '/assets/images/dishes/signature-maodu.png',
+        unit: '份'
+      }
+    ],
+    peopleCount: 3,
+    remark: '',
+    totalAmount: 248,
+    status: 'completed',
+    createdAt: '2026-03-08T19:15:20.000Z'
+  },
+  {
+    id: 'order-demo-003',
+    orderNo: 'CG2026030712453003',
+    items: [
+      {
+        dishId: 'dish-broth-golden-tomato',
+        quantity: 1,
+        price: 62,
+        name: '金汤番茄锅',
+        image: '/assets/images/dishes/broth-clear.png',
+        unit: '份'
+      },
+      {
+        dishId: 'dish-meat-diaolong',
+        quantity: 1,
+        price: 72,
+        name: '手切吊龙',
+        image: '/assets/images/dishes/meat-wagyu.png',
+        unit: '份'
+      },
+      {
+        dishId: 'dish-vegetable-soft-tofu',
+        quantity: 1,
+        price: 16,
+        name: '嫩豆腐',
+        image: '/assets/images/dishes/vegetable-mushroom.png',
+        unit: '份'
+      }
+    ],
+    peopleCount: 2,
+    remark: '同行有人不能吃辣',
+    totalAmount: 150,
+    status: 'canceled',
+    createdAt: '2026-03-07T12:45:30.000Z'
+  }
+];
+
+async function writeData(filename, data) {
+  const filePath = path.join(dataDir, filename);
+  await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8');
+}
+
+async function main() {
+  await fs.mkdir(dataDir, { recursive: true });
+  await Promise.all([
+    writeData('storeConfig.json', storeConfig),
+    writeData('categories.json', categories),
+    writeData('dishes.json', dishes),
+    writeData('orders.json', orders)
+  ]);
+
+  console.log('sample data generated');
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

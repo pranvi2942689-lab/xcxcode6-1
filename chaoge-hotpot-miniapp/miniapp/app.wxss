@@ -1,0 +1,146 @@
+page {
+  min-height: 100%;
+  background: #0f0f10;
+  color: #f5f1e8;
+  font-size: 26rpx;
+  line-height: 1.6;
+  font-family: "Source Han Serif SC", "Noto Serif SC", "PingFang SC", serif;
+}
+
+view,
+text,
+image,
+scroll-view,
+swiper,
+swiper-item,
+button,
+textarea {
+  box-sizing: border-box;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  border: none;
+  background: transparent;
+}
+
+button::after {
+  border: none;
+}
+
+.page-shell {
+  padding: 24rpx;
+}
+
+.page-header {
+  margin-bottom: 24rpx;
+}
+
+.page-title {
+  font-size: 40rpx;
+  font-weight: 600;
+  color: #f5f1e8;
+}
+
+.page-subtitle {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: #b8aea3;
+}
+
+.section-gap {
+  margin-top: 24rpx;
+}
+
+.card {
+  background: #17181a;
+  border: 1rpx solid rgba(201, 169, 107, 0.18);
+  border-radius: 24rpx;
+  padding: 20rpx;
+}
+
+.card-secondary {
+  background: #1e2023;
+  border: 1rpx solid rgba(201, 169, 107, 0.18);
+  border-radius: 24rpx;
+  padding: 20rpx;
+}
+
+.module-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #f5f1e8;
+}
+
+.card-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #f5f1e8;
+}
+
+.text-body {
+  font-size: 26rpx;
+  color: #f5f1e8;
+}
+
+.text-muted {
+  font-size: 24rpx;
+  color: #b8aea3;
+}
+
+.text-weak {
+  font-size: 24rpx;
+  color: #8e857b;
+}
+
+.text-accent {
+  color: #c9a96b;
+}
+
+.pill-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36rpx;
+  padding: 0 14rpx;
+  border-radius: 999rpx;
+  background: rgba(201, 169, 107, 0.1);
+  border: 1rpx solid rgba(201, 169, 107, 0.2);
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #c9a96b;
+}
+
+.hairline {
+  border-bottom: 1rpx solid rgba(201, 169, 107, 0.12);
+}
+
+.safe-bottom-space {
+  height: calc(140rpx + env(safe-area-inset-bottom));
+}
+
+.amount {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #c9a96b;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+}
+
+.textarea-field {
+  width: 100%;
+  min-height: 200rpx;
+  padding: 18rpx 20rpx;
+  border-radius: 24rpx;
+  border: 1rpx solid rgba(201, 169, 107, 0.18);
+  background: #1e2023;
+  color: #f5f1e8;
+  font-size: 26rpx;
+}

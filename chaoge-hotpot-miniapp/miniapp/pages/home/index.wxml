@@ -1,0 +1,69 @@
+<view class="page-shell home-page">
+  <block wx:if="{{loading}}">
+    <empty-state type="loading" />
+  </block>
+
+  <block wx:elif="{{errorType}}">
+    <empty-state
+      type="{{errorType}}"
+      title="首页加载失败"
+      description="请重新获取门店与菜品信息。"
+      buttonText="重新加载"
+      bind:action="fetchPageData"
+    />
+  </block>
+
+  <block wx:else>
+    <view class="hero card">
+      <image class="hero__image" src="{{storeConfig.heroImage}}" mode="aspectFill"></image>
+      <view class="hero__overlay"></view>
+      <view class="hero__content">
+        <view class="hero__badge">高端到店点餐</view>
+        <text class="hero__title">{{storeConfig.storeName}}</text>
+        <text class="hero__slogan">{{storeConfig.slogan}}</text>
+        <text class="hero__meta">{{storeConfig.businessHours}} · {{storeConfig.address}}</text>
+      </view>
+    </view>
+
+    <view class="hero-actions section-gap">
+      <ui-button text="进入点餐" type="primary" bind:tap="goMenu" />
+      <ui-button text="查看订单" type="secondary" bind:tap="goOrders" />
+      <ui-button text="门店信息" type="ghost" bind:tap="goMine" />
+    </view>
+
+    <view class="section-gap">
+      <section-title title="推荐锅底" subtitle="暖席开场，先定桌上主调" />
+    </view>
+    <view class="recommend-list section-gap">
+      <view wx:for="{{recommendBroths}}" wx:key="id" class="recommend-card card-secondary" bindtap="goMenu">
+        <image class="recommend-card__image" src="{{item.image}}" mode="aspectFill"></image>
+        <view class="recommend-card__body">
+          <text class="recommend-card__title">{{item.name}}</text>
+          <text class="recommend-card__subtitle">{{item.subtitle}}</text>
+          <text class="recommend-card__desc">{{item.description}}</text>
+          <view class="recommend-card__footer">
+            <view class="pill-tag">推荐锅底</view>
+            <text class="recommend-card__price">¥{{item.price}}/{{item.unit}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="section-gap">
+      <section-title title="招牌菜推荐" subtitle="精选人气涮品，适合本桌开点" />
+    </view>
+    <view class="signature-grid section-gap">
+      <view wx:for="{{signatureDishes}}" wx:key="id" class="signature-card card-secondary" bindtap="goMenu">
+        <image class="signature-card__image" src="{{item.image}}" mode="aspectFill"></image>
+        <text class="signature-card__title">{{item.name}}</text>
+        <text class="signature-card__subtitle">{{item.subtitle}}</text>
+        <view class="signature-card__bottom">
+          <view class="signature-card__tags">
+            <text wx:for="{{item.tags}}" wx:key="*this" class="pill-tag">{{item}}</text>
+          </view>
+          <text class="signature-card__price">¥{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

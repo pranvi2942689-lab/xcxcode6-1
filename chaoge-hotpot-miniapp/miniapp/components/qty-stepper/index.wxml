@@ -1,0 +1,19 @@
+<view class="qty-stepper" catchtap="noop">
+  <button
+    class="{{minusClass}}"
+    hover-class="none"
+    disabled="{{minusDisabled}}"
+    bindtap="handleMinus"
+  >
+    <text>-</text>
+  </button>
+  <text class="qty-stepper__value">{{value}}</text>
+  <button
+    class="{{plusClass}}"
+    hover-class="none"
+    disabled="{{plusDisabled}}"
+    bindtap="handlePlus"
+  >
+    <text>+</text>
+  </button>
+</view>

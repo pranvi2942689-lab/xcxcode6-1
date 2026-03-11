@@ -1,0 +1,45 @@
+<view class="page-shell mine-page">
+  <view class="page-header">
+    <text class="page-title">门店信息</text>
+    <text class="page-subtitle">查看联系方式、地址与品牌简介。</text>
+  </view>
+
+  <block wx:if="{{loading}}">
+    <empty-state type="loading" />
+  </block>
+
+  <block wx:elif="{{errorType}}">
+    <empty-state
+      type="{{errorType}}"
+      title="门店信息加载失败"
+      description="请检查服务状态后重新获取。"
+      buttonText="重新加载"
+      bind:action="fetchStoreConfig"
+    />
+  </block>
+
+  <block wx:elif="{{storeConfig}}">
+    <view class="store-card card">
+      <image class="store-card__hero" src="{{storeConfig.heroImage}}" mode="aspectFill"></image>
+      <view class="store-card__body">
+        <text class="store-card__name">{{storeConfig.storeName}}</text>
+        <text class="store-card__slogan">{{storeConfig.slogan}}</text>
+        <view class="store-card__meta">
+          <text>营业时间：{{storeConfig.businessHours}}</text>
+          <text>联系电话：{{storeConfig.phone}}</text>
+          <text>门店地址：{{storeConfig.address}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="mine-actions section-gap">
+      <ui-button text="致电门店" type="primary" bind:tap="callStore" />
+      <ui-button text="我的订单" type="secondary" bind:tap="goOrders" />
+    </view>
+
+    <view class="card section-gap">
+      <text class="card-title">品牌简介</text>
+      <text class="brand-intro">{{brandIntro}}</text>
+    </view>
+  </block>
+</view>

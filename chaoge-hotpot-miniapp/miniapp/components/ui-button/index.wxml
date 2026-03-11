@@ -1,0 +1,11 @@
+<button
+  class="{{rootClass}}"
+  hover-class="none"
+  disabled="{{isInactive}}"
+  bindtap="handleTap"
+>
+  <view class="ui-button__inner">
+    <view wx:if="{{loading}}" class="ui-button__spinner"></view>
+    <text class="ui-button__text">{{displayText}}</text>
+  </view>
+</button>
