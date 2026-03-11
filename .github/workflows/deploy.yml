@@ -3,7 +3,7 @@ name: 🚀 自动部署到腾讯云
 on:
   push:
     branches:
-      - main # 只有当你把代码推送到 main 分支时，才会触发自动部署
+      - main 
 
 jobs:
   deploy:
@@ -18,6 +18,7 @@ jobs:
 
       - name: 3️⃣ 打包代码并推送到云端 (Docker)
         run: |
+          cd chaoge-hotpot-miniapp/server
           docker build -t ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest .
           docker push ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest
 
@@ -27,8 +28,9 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: root
           password: ${{ secrets.SERVER_PWD }}
-          source: "docker-compose.yml"
+          source: "chaoge-hotpot-miniapp/docker-compose.yml"
           target: "/root/miniapp"
+          strip_components: 1
 
       - name: 5️⃣ 登录服务器执行重启
         uses: appleboy/ssh-action@master
@@ -38,20 +40,15 @@ jobs:
           password: ${{ secrets.SERVER_PWD }}
           script: |
             echo "开始部署..."
-            # 登录镜像仓库以获取拉取权限
             echo "${{ secrets.REGISTRY_PASS }}" | docker login ccr.ccs.tencentyun.com -u "${{ secrets.REGISTRY_USER }}" --password-stdin
             
-            # 进入我们刚才传文件的目录
             cd /root/miniapp
             
-            # 神奇魔法：自动把配置里的 build 替换成我们刚才打包好的云端镜像
             sed -i 's|build:.*|image: ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest|g' docker-compose.yml
             
-            # 关掉旧服务，拉取最新代码，重新启动！
             docker-compose down
             docker pull ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest
             docker-compose up -d
             
-            # 清理不要的垃圾文件，保持服务器干净
             docker image prune -f
             echo "部署大功告成！"
