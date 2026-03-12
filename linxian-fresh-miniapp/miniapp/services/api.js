@@ -1,4 +1,5 @@
-const request = require("../utils/request");
+// 统一引入 request 函数
+const request = require("../utils/request.js");
 
 module.exports = {
   getConfig: () => request({ url: "/api/config" }),

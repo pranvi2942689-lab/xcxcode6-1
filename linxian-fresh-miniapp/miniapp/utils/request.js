@@ -1,5 +1,5 @@
-const { API_BASE_URL, REQUEST_TIMEOUT } = require("../config");
-const storage = require("./storage");
+const { API_BASE_URL, REQUEST_TIMEOUT } = require("../config/index.js");
+const storage = require("./storage.js");
 
 function normalizeAssets(payload) {
   if (Array.isArray(payload)) {
@@ -53,4 +53,5 @@ function request(options) {
   });
 }
 
+// 统一导出 request 函数
 module.exports = request;
