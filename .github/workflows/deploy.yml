@@ -1,41 +1,41 @@
-name: Deploy Miniapp Server
+name: Deploy to Server
 
 on:
   push:
-    branches: [ "main" ] # 监听 main 分支的提交
+    branches:
+      - main
+      - master
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      # 1. 登录腾讯云镜像仓库
-      - name: Login to Tencent Registry
-        uses: docker/login-action@v2
-        with:
-          registry: ccr.ccs.tencentyun.com
-          username: ${{ secrets.REGISTRY_USER }}
-          password: ${{ secrets.REGISTRY_PASS }}
+      - name: Login to Tencent TCR
+        # 这里用你的账号密码登录腾讯云
+        run: echo "${{ secrets.REGISTRY_PASS }}" | docker login ccr.ccs.tencentyun.com -u "${{ secrets.REGISTRY_USER }}" --password-stdin
 
-      # 2. 打包并推送 Docker 镜像 (这里会用到你根目录的 Dockerfile)
-      - name: Build and Push Docker Image
-        run: |
-          docker build -t ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest .
-          docker push ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest
+      - name: Build Docker Image
+        # 【关键修复】这里明确使用正确的腾讯云 TCR 网址来打包
+        run: docker build -t ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest .
 
-      # 3. SSH 登录服务器，拉取镜像并重启
-      - name: Deploy to Tencent Cloud Server
+      - name: Push Docker Image
+        # 把打包好的镜像推送到腾讯云
+        run: docker push ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest
+
+      - name: Deploy to Server
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ secrets.SERVER_IP }}
-          username: root # 我们直接用 root 权限执行，省去 sudo 的麻烦
-          # 下面这行很重要：如果你用密码登录服务器，请把 key: 改成 password:
-          password: ${{ secrets.SERVER_PASSWORD }} 
+          host: ${{ secrets.SERVER_HOST }}
+          username: root
+          password: ${{ secrets.SERVER_PASS }}
           script: |
-            cd /opt/miniapp-server
-            docker login -u ${{ secrets.REGISTRY_USER }} -p ${{ secrets.REGISTRY_PASS }} ccr.ccs.tencentyun.com
-            docker-compose pull backend
-            docker-compose up -d --remove-orphans
-            docker image prune -f
+            # 登录服务器拉取最新镜像并重启
+            docker login ccr.ccs.tencentyun.com -u "${{ secrets.REGISTRY_USER }}" -p "${{ secrets.REGISTRY_PASS }}"
+            docker pull ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest
+            docker stop miniapp-server || true
+            docker rm miniapp-server || true
+            docker run -d --name miniapp-server -p 3000:3000 ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest
