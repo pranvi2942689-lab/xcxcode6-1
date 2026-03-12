@@ -1,0 +1,10 @@
+<view class="page">
+  <view wx:for="{{list}}" wx:key="id" class="notice-item card" data-item="{{item}}" bindtap="openDetail">
+    <image class="notice-item__image" src="{{item.cover}}" mode="aspectFill" />
+    <view class="notice-item__body">
+      <view class="notice-item__title">{{item.title}}</view>
+      <view class="notice-item__summary">{{item.summary}}</view>
+      <view class="notice-item__time">{{item.publishAt}}</view>
+    </view>
+  </view>
+</view>

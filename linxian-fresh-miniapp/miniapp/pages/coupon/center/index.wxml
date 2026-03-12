@@ -1,0 +1,4 @@
+<view class="page">
+  <coupon-card wx:for="{{list}}" wx:key="id" coupon="{{item}}" bind:tap="claimCoupon" />
+  <empty-state wx:if="{{!list.length}}" title="暂无可领取优惠券" desc="请稍后再来看看" />
+</view>

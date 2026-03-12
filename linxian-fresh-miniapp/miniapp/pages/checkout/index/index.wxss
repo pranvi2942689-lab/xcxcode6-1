@@ -1,0 +1,44 @@
+.slot-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 16rpx;
+}
+
+.slot-item {
+  padding: 12rpx 18rpx;
+  border-radius: 999rpx;
+  background: #eef1f4;
+  color: #4b5563;
+  font-size: 22rpx;
+}
+
+.slot-item.is-active {
+  background: #eaf8ef;
+  color: #22b45a;
+}
+
+.checkout-item,
+.amount-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72rpx;
+  color: #4b5563;
+  font-size: 24rpx;
+}
+
+.amount-row--total {
+  color: #1f2a37;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.remark-box {
+  width: 100%;
+  min-height: 180rpx;
+  margin-top: 16rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background: #f8faf9;
+}

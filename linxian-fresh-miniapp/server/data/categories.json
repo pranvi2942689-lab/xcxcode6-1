@@ -1,0 +1,47 @@
+[
+  {
+    "id": "cat1001",
+    "name": "蔬菜水果",
+    "icon": "🥬",
+    "desc": "当季直采 新鲜到家",
+    "sort": 1,
+    "isActive": true,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "cat1002",
+    "name": "肉禽蛋奶",
+    "icon": "🥩",
+    "desc": "每日严选 冷链配送",
+    "sort": 2,
+    "isActive": true,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "cat1003",
+    "name": "粮油百货",
+    "icon": "🛒",
+    "desc": "家庭常备 一站购齐",
+    "sort": 3,
+    "isActive": true,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "cat1004",
+    "name": "早餐乳品",
+    "icon": "🥛",
+    "desc": "早餐搭配 即拿即走",
+    "sort": 4,
+    "isActive": true,
+    "updatedAt": "2026-03-10T00:00:00.000Z"
+  },
+  {
+    "id": "cat1005",
+    "name": "团购爆款",
+    "icon": "🔥",
+    "desc": "高频复购 性价比高",
+    "sort": 5,
+    "isActive": true,
+    "updatedAt": "2026-03-09T00:00:00.000Z"
+  }
+]

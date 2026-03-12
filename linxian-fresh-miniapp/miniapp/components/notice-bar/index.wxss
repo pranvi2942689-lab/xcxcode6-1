@@ -1,0 +1,25 @@
+.notice-bar {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  min-height: 72rpx;
+  padding: 0 20rpx;
+  border-radius: 20rpx;
+  background: #ffffff;
+  box-shadow: 0 8rpx 24rpx rgba(31, 42, 55, 0.06);
+}
+
+.notice-bar__icon {
+  font-size: 28rpx;
+}
+
+.notice-bar__text {
+  flex: 1;
+  color: #4b5563;
+  font-size: 24rpx;
+}
+
+.notice-bar__arrow {
+  color: #8a94a6;
+  font-size: 28rpx;
+}

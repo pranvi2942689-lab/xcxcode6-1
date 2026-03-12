@@ -1,3 +1,0 @@
-<view class="status-tag status-tag--{{current.theme}}">
-  <text>{{current.label}}</text>
-</view>

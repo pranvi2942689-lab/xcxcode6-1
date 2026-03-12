@@ -1,0 +1,41 @@
+[
+  {
+    "id": "c1001",
+    "name": "锦绣花园社区",
+    "city": "上海市",
+    "district": "浦东新区",
+    "deliveryDesc": "前置仓配送，最快 30 分钟",
+    "minOrderAmount": 39,
+    "deliveryFee": 4,
+    "serviceHours": "07:30-22:00",
+    "isOpen": true,
+    "sort": 1,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "c1002",
+    "name": "春申里社区",
+    "city": "上海市",
+    "district": "闵行区",
+    "deliveryDesc": "满 49 元免配送费",
+    "minOrderAmount": 49,
+    "deliveryFee": 5,
+    "serviceHours": "08:00-21:30",
+    "isOpen": true,
+    "sort": 2,
+    "updatedAt": "2026-03-10T00:00:00.000Z"
+  },
+  {
+    "id": "c1003",
+    "name": "星河家园社区",
+    "city": "上海市",
+    "district": "宝山区",
+    "deliveryDesc": "夜间下单次日晨配",
+    "minOrderAmount": 35,
+    "deliveryFee": 3,
+    "serviceHours": "06:30-20:30",
+    "isOpen": false,
+    "sort": 3,
+    "updatedAt": "2026-03-09T00:00:00.000Z"
+  }
+]

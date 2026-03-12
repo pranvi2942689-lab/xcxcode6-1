@@ -1,0 +1,7 @@
+<view class="page page--safe">
+  <address-card wx:for="{{list}}" wx:key="id" address="{{item}}" bind:tap="selectAddress" bind:edit="editAddress" />
+  <empty-state wx:if="{{!list.length}}" title="还没有收货地址" desc="新增后可用于结算配送" />
+  <view class="section-gap">
+    <ui-button text="新增地址" size="lg" block bind:tap="addAddress" />
+  </view>
+</view>

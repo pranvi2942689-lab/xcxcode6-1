@@ -1,0 +1,23 @@
+<view class="page">
+  <view class="card card-pad">
+    <view class="input-title">收货人</view>
+    <input class="input-shell" value="{{form.name}}" data-key="name" bindinput="handleInput" placeholder="请输入收货人姓名" />
+    <view class="input-title">手机号</view>
+    <input class="input-shell" value="{{form.phone}}" data-key="phone" bindinput="handleInput" placeholder="请输入手机号" />
+    <view class="input-title">社区</view>
+    <input class="input-shell" value="{{form.communityName}}" data-key="communityName" bindinput="handleInput" placeholder="请输入社区名称" />
+    <view class="input-title">楼栋门牌</view>
+    <input class="input-shell" value="{{form.detail}}" data-key="detail" bindinput="handleInput" placeholder="请输入楼栋信息" />
+    <view class="input-title">房号</view>
+    <input class="input-shell" value="{{form.houseNumber}}" data-key="houseNumber" bindinput="handleInput" placeholder="请输入房号" />
+    <view class="input-title">地址标签</view>
+    <input class="input-shell" value="{{form.tag}}" data-key="tag" bindinput="handleInput" placeholder="如 家 / 公司" />
+    <view class="default-line" bindtap="toggleDefault">
+      <text>{{form.isDefault ? '✓' : '○'}}</text>
+      <text>设为默认地址</text>
+    </view>
+  </view>
+  <view class="section-gap">
+    <view class="submit-btn" bindtap="submit">保存地址</view>
+  </view>
+</view>

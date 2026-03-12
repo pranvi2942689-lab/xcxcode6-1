@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
+*.log
+server/.env
+server/data/*.tmp
+server/static/uploads/*
+!server/static/uploads/.gitkeep
+miniapp/project.config.json
+admin/.vite

@@ -1,7 +1,0 @@
-<view class="section-title">
-  <view>
-    <text class="section-title__main">{{title}}</text>
-    <text wx:if="{{subtitle}}" class="section-title__subtitle">{{subtitle}}</text>
-  </view>
-  <text wx:if="{{actionText}}" class="section-title__action" bindtap="handleAction">{{actionText}}</text>
-</view>

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "uc1001",
+    "userId": "u1001",
+    "couponId": "cp1001",
+    "status": "available",
+    "claimedAt": "2026-03-07T00:00:00.000Z",
+    "usedAt": ""
+  },
+  {
+    "id": "uc1002",
+    "userId": "u1001",
+    "couponId": "cp1002",
+    "status": "used",
+    "claimedAt": "2026-02-28T00:00:00.000Z",
+    "usedAt": "2026-03-02T00:00:00.000Z",
+    "orderId": "o1002"
+  },
+  {
+    "id": "uc1003",
+    "userId": "u1002",
+    "couponId": "cp1003",
+    "status": "available",
+    "claimedAt": "2026-03-10T00:00:00.000Z",
+    "usedAt": ""
+  },
+  {
+    "id": "uc1004",
+    "userId": "u1001",
+    "couponId": "cp1005",
+    "status": "expired",
+    "claimedAt": "2026-02-18T00:00:00.000Z",
+    "usedAt": ""
+  },
+  {
+    "id": "uc1005",
+    "userId": "u1002",
+    "couponId": "cp1004",
+    "status": "available",
+    "claimedAt": "2026-03-11T00:00:00.000Z",
+    "usedAt": ""
+  }
+]

@@ -1,0 +1,8 @@
+<view wx:if="{{content}}" class="page">
+  <image class="content-cover card" src="{{content.cover}}" mode="aspectFill" />
+  <view class="card card-pad section-gap">
+    <view class="text-title">{{content.title}}</view>
+    <view class="text-muted">{{content.publishAt}}</view>
+    <view wx:for="{{content.contentBlocks}}" wx:key="text" class="content-text">{{item.text}}</view>
+  </view>
+</view>

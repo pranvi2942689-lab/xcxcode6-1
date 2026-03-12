@@ -1,0 +1,108 @@
+[
+  {
+    "id": "cp1001",
+    "title": "新人专享 10 元券",
+    "type": "cash",
+    "thresholdAmount": 39,
+    "discountAmount": 10,
+    "startAt": "2026-03-02",
+    "endAt": "2026-04-01",
+    "status": "active",
+    "scopeType": "all",
+    "goodsIds": [],
+    "communityIds": [],
+    "sort": 1,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "cp1002",
+    "title": "满 59 减 15",
+    "type": "cash",
+    "thresholdAmount": 59,
+    "discountAmount": 15,
+    "startAt": "2026-03-07",
+    "endAt": "2026-03-27",
+    "status": "active",
+    "scopeType": "all",
+    "goodsIds": [],
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "sort": 2,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "cp1003",
+    "title": "肉禽蛋奶专区 12 元券",
+    "type": "cash",
+    "thresholdAmount": 49,
+    "discountAmount": 12,
+    "startAt": "2026-03-07",
+    "endAt": "2026-04-11",
+    "status": "active",
+    "scopeType": "goods",
+    "goodsIds": [
+      "g1005",
+      "g1006",
+      "g1007",
+      "g1008"
+    ],
+    "communityIds": [],
+    "sort": 3,
+    "updatedAt": "2026-03-10T00:00:00.000Z"
+  },
+  {
+    "id": "cp1004",
+    "title": "社区团购满 99 减 20",
+    "type": "cash",
+    "thresholdAmount": 99,
+    "discountAmount": 20,
+    "startAt": "2026-03-10",
+    "endAt": "2026-03-19",
+    "status": "active",
+    "scopeType": "goods",
+    "goodsIds": [
+      "g1004",
+      "g1005",
+      "g1009",
+      "g1010"
+    ],
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "sort": 4,
+    "updatedAt": "2026-03-10T00:00:00.000Z"
+  },
+  {
+    "id": "cp1005",
+    "title": "已过期 8 元券",
+    "type": "cash",
+    "thresholdAmount": 29,
+    "discountAmount": 8,
+    "startAt": "2026-02-10",
+    "endAt": "2026-03-10",
+    "status": "expired",
+    "scopeType": "all",
+    "goodsIds": [],
+    "communityIds": [],
+    "sort": 5,
+    "updatedAt": "2026-03-09T00:00:00.000Z"
+  },
+  {
+    "id": "cp1006",
+    "title": "暂停发放 5 元券",
+    "type": "cash",
+    "thresholdAmount": 19,
+    "discountAmount": 5,
+    "startAt": "2026-03-11",
+    "endAt": "2026-05-11",
+    "status": "disabled",
+    "scopeType": "all",
+    "goodsIds": [],
+    "communityIds": [],
+    "sort": 6,
+    "updatedAt": "2026-03-08T00:00:00.000Z"
+  }
+]

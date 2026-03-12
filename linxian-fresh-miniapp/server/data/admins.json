@@ -1,0 +1,42 @@
+[
+  {
+    "id": "a1001",
+    "account": "admin",
+    "password": "123456",
+    "name": "系统超管",
+    "role": "super_admin",
+    "permissions": [
+      "*"
+    ],
+    "createdAt": "2025-12-02T00:00:00.000Z"
+  },
+  {
+    "id": "a1002",
+    "account": "ops",
+    "password": "123456",
+    "name": "运营管理员",
+    "role": "operator",
+    "permissions": [
+      "dashboard",
+      "goods",
+      "orders",
+      "contents",
+      "coupons"
+    ],
+    "createdAt": "2025-12-22T00:00:00.000Z"
+  },
+  {
+    "id": "a1003",
+    "account": "supply",
+    "password": "123456",
+    "name": "商品运营",
+    "role": "goods_manager",
+    "permissions": [
+      "dashboard",
+      "goods",
+      "categories",
+      "sections"
+    ],
+    "createdAt": "2026-01-01T00:00:00.000Z"
+  }
+]

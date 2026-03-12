@@ -1,0 +1,28 @@
+.search-block {
+  padding: 20rpx;
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 16rpx;
+}
+
+.tag {
+  padding: 12rpx 20rpx;
+  border-radius: 999rpx;
+  background: #eef1f4;
+  color: #4b5563;
+  font-size: 22rpx;
+}
+
+.tag--active {
+  background: #eaf8ef;
+  color: #22b45a;
+}
+
+.section-gap goods-card-list {
+  display: block;
+  margin-bottom: 16rpx;
+}

@@ -1,0 +1,6 @@
+<view class="empty-state">
+  <text class="empty-state__icon">{{icon}}</text>
+  <view class="empty-state__title">{{title}}</view>
+  <view class="empty-state__desc">{{desc}}</view>
+  <ui-button wx:if="{{actionText}}" text="{{actionText}}" variant="primary" bind:tap="handleTap" />
+</view>

@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "潮阁火锅",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "section-title": "../../components/section-title/index",
-    "empty-state": "../../components/empty-state/index",
-    "ui-button": "../../components/ui-button/index"
-  }
-}

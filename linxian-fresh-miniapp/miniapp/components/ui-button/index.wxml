@@ -1,0 +1,3 @@
+<view class="ui-button ui-button--{{variant}} ui-button--{{size}} {{block ? 'ui-button--block' : ''}} {{disabled ? 'is-disabled' : ''}}" bindtap="handleTap">
+  <slot>{{text}}</slot>
+</view>

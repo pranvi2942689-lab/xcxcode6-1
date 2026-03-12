@@ -1,0 +1,7 @@
+<view class="bottom-bar fixed-safe-bottom">
+  <view class="bottom-bar__left">
+    <view class="bottom-bar__text">{{leftText}}</view>
+    <view wx:if="{{leftSubText}}" class="bottom-bar__sub">{{leftSubText}}</view>
+  </view>
+  <ui-button text="{{buttonText}}" size="lg" bind:tap="handleTap" disabled="{{disabled}}" />
+</view>

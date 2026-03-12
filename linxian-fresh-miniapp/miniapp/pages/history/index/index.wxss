@@ -1,0 +1,4 @@
+.page goods-card-list {
+  display: block;
+  margin-top: 16rpx;
+}

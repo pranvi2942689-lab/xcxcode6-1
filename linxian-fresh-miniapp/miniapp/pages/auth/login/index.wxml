@@ -1,0 +1,7 @@
+<view class="page">
+  <view class="login-box card">
+    <view class="login-title">欢迎来到邻鲜到家</view>
+    <view class="text-muted">使用演示账号快速体验加购、下单、卡券与售后流程</view>
+    <view class="login-btn" bindtap="mockLogin">{{loading ? '登录中...' : '一键模拟登录'}}</view>
+  </view>
+</view>

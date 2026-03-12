@@ -1,0 +1,29 @@
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20rpx;
+  padding: 20rpx 24rpx;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 -8rpx 24rpx rgba(31, 42, 55, 0.08);
+}
+
+.bottom-bar__left {
+  flex: 1;
+}
+
+.bottom-bar__text {
+  color: #1f2a37;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.bottom-bar__sub {
+  margin-top: 8rpx;
+  color: #8a94a6;
+  font-size: 22rpx;
+}

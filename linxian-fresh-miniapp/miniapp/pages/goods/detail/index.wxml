@@ -1,0 +1,54 @@
+<view wx:if="{{goods}}" class="page page--safe">
+  <image class="detail-image card" src="{{goods.cover}}" mode="aspectFill" />
+  <view class="card detail-base section-gap">
+    <view class="detail-title">{{goods.name}}</view>
+    <view class="detail-sub">{{goods.subtitle}}</view>
+    <view class="detail-price-row">
+      <view class="price">¥{{goods.price}}</view>
+      <view class="line-through">¥{{goods.originalPrice}}</view>
+      <view class="detail-sold">已售 {{goods.soldCount}}</view>
+    </view>
+    <view class="detail-tags">
+      <text wx:for="{{goods.tags}}" wx:key="*this" class="detail-tag">{{item}}</text>
+    </view>
+  </view>
+
+  <view class="card card-pad section-gap" bindtap="showPopup">
+    <view class="row-between">
+      <view>
+        <view class="text-title">规格与数量</view>
+        <view class="text-muted">{{goods.specText}} · 数量 {{quantity}}</view>
+      </view>
+      <view class="text-muted">选择 ›</view>
+    </view>
+  </view>
+
+  <view class="card card-pad section-gap">
+    <view class="text-title">商品说明</view>
+    <view class="detail-text">{{goods.desc}}</view>
+    <view class="detail-text">营养信息：{{goods.nutritionInfo}}</view>
+    <view class="detail-text">存储建议：{{goods.storageTips}}</view>
+  </view>
+
+  <bottom-action-bar leftText="{{isFavorite ? '已收藏该商品' : '支持加入购物车与立即购买'}}" leftSubText="{{goods.specText}}" buttonText="立即购买" bind:submit="buyNow" />
+
+  <view class="detail-actions fixed-safe-bottom">
+    <view class="detail-action" bindtap="toggleFavorite">{{isFavorite ? '取消收藏' : '收藏'}}</view>
+    <view class="detail-action detail-action--primary" bindtap="showPopup">加入购物车</view>
+  </view>
+
+  <option-popup show="{{popupVisible}}" title="选择规格" buttonText="加入购物车" bind:close="hidePopup" bind:confirm="addToCart">
+    <view class="popup-body">
+      <image class="popup-body__image" src="{{goods.cover}}" mode="aspectFill" />
+      <view class="popup-body__info">
+        <view class="popup-body__name">{{goods.name}}</view>
+        <view class="price-small">¥{{goods.price}}</view>
+        <view class="text-muted">{{goods.specText}}</view>
+      </view>
+    </view>
+    <view class="popup-qty">
+      <view class="text-subtitle">购买数量</view>
+      <quantity-stepper value="{{quantity}}" max="{{maxStock}}" bind:change="changeQuantity" />
+    </view>
+  </option-popup>
+</view>

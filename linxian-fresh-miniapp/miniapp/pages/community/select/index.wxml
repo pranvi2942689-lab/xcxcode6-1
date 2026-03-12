@@ -1,0 +1,6 @@
+<view class="page">
+  <search-bar value="{{keyword}}" placeholder="搜索社区 / 小区" bind:change="onKeywordChange" bind:search="onSearch" />
+  <view class="section-gap">
+    <community-card wx:for="{{list}}" wx:key="id" community="{{item}}" selected="{{currentId === item.id}}" bind:tap="selectCommunity" />
+  </view>
+</view>

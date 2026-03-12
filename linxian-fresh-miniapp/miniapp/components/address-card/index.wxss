@@ -1,0 +1,46 @@
+.address {
+  padding: 20rpx;
+}
+
+.address--selected {
+  border: 2rpx solid #22b45a;
+}
+
+.address__head,
+.address__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.address__user {
+  color: #1f2a37;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.address__default,
+.address__tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70rpx;
+  height: 40rpx;
+  padding: 0 16rpx;
+  border-radius: 999rpx;
+  background: #eaf8ef;
+  color: #22b45a;
+  font-size: 20rpx;
+}
+
+.address__detail {
+  margin: 16rpx 0;
+  color: #4b5563;
+  font-size: 24rpx;
+  line-height: 36rpx;
+}
+
+.address__edit {
+  color: #8a94a6;
+  font-size: 22rpx;
+}

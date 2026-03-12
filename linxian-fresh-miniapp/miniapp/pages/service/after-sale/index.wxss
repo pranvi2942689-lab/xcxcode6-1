@@ -1,0 +1,49 @@
+.input-title {
+  margin: 16rpx 0 10rpx;
+  color: #4b5563;
+  font-size: 24rpx;
+}
+
+.remark-box {
+  width: 100%;
+  min-height: 160rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background: #f8faf9;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88rpx;
+  margin-top: 20rpx;
+  border-radius: 999rpx;
+  color: #ffffff;
+  background: linear-gradient(135deg, #22b45a, #18964a);
+}
+
+.ticket-item {
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #eef1f4;
+}
+
+.ticket-item:last-child {
+  border-bottom: none;
+}
+
+.ticket-item__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #1f2a37;
+  font-size: 24rpx;
+}
+
+.ticket-item__body,
+.ticket-item__reply {
+  margin-top: 10rpx;
+  color: #4b5563;
+  font-size: 22rpx;
+  line-height: 34rpx;
+}

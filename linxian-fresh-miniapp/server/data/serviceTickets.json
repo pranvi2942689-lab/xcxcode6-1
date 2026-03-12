@@ -1,0 +1,48 @@
+[
+  {
+    "id": "st1001",
+    "orderId": "o1006",
+    "orderNo": "LX2026030408101006",
+    "userId": "u1002",
+    "type": "refund",
+    "reason": "米袋外包装破损",
+    "status": "processing",
+    "images": [
+      "/static/mock/goods-rice.svg"
+    ],
+    "remark": "希望退部分款",
+    "reply": "已提交仓配核实，将在 24 小时内处理。",
+    "createdAt": "2026-03-06T00:00:00.000Z",
+    "updatedAt": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "id": "st1002",
+    "orderId": "o1004",
+    "orderNo": "LX2026022608101004",
+    "userId": "u1001",
+    "type": "quality",
+    "reason": "鸡蛋有 1 枚破损",
+    "status": "resolved",
+    "images": [
+      "/static/mock/goods-egg.svg"
+    ],
+    "remark": "已拍照",
+    "reply": "已补发 1 枚鸡蛋优惠券。",
+    "createdAt": "2026-02-28T00:00:00.000Z",
+    "updatedAt": "2026-03-01T00:00:00.000Z"
+  },
+  {
+    "id": "st1003",
+    "orderId": "o1003",
+    "orderNo": "LX2026030509101003",
+    "userId": "u1001",
+    "type": "delivery",
+    "reason": "配送超时",
+    "status": "submitted",
+    "images": [],
+    "remark": "比预计晚了 40 分钟",
+    "reply": "",
+    "createdAt": "2026-03-08T00:00:00.000Z",
+    "updatedAt": "2026-03-08T00:00:00.000Z"
+  }
+]

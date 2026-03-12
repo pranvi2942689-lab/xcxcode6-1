@@ -1,0 +1,5 @@
+<view class="filter-tabs">
+  <view wx:for="{{tabs}}" wx:key="value" class="filter-tabs__item {{value === item.value ? 'is-active' : ''}}" data-value="{{item.value}}" bindtap="handleTap">
+    {{item.label}}
+  </view>
+</view>

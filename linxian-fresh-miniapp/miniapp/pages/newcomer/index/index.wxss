@@ -1,0 +1,19 @@
+.newcomer-top {
+  margin-bottom: 16rpx;
+}
+
+.newcomer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  margin-top: 24rpx;
+  border-radius: 999rpx;
+  color: #ffffff;
+  background: linear-gradient(135deg, #22b45a, #ff9f1a);
+}
+
+.page coupon-card {
+  display: block;
+  margin-top: 16rpx;
+}

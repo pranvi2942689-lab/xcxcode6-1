@@ -1,0 +1,76 @@
+[
+  {
+    "id": "s1001",
+    "title": "今日推荐",
+    "type": "today_recommend",
+    "subtitle": "餐桌高频复购，搭配省心",
+    "goodsIds": [
+      "g1001",
+      "g1002",
+      "g1005",
+      "g1007",
+      "g1008",
+      "g1003"
+    ],
+    "contentIds": [],
+    "communityIds": [],
+    "isActive": true,
+    "sort": 1,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "s1002",
+    "title": "热销爆款",
+    "type": "hot_sale",
+    "subtitle": "销量口碑双高",
+    "goodsIds": [
+      "g1001",
+      "g1004",
+      "g1006",
+      "g1007",
+      "g1014"
+    ],
+    "contentIds": [],
+    "communityIds": [],
+    "isActive": true,
+    "sort": 2,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "s1003",
+    "title": "社区团购专区",
+    "type": "community_group",
+    "subtitle": "拼团更实惠，家庭囤货优选",
+    "goodsIds": [
+      "g1004",
+      "g1005",
+      "g1007",
+      "g1009",
+      "g1010"
+    ],
+    "contentIds": [],
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "isActive": true,
+    "sort": 3,
+    "updatedAt": "2026-03-10T00:00:00.000Z"
+  },
+  {
+    "id": "s1004",
+    "title": "本周活动",
+    "type": "marketing",
+    "subtitle": "公告与活动精选",
+    "goodsIds": [],
+    "contentIds": [
+      "ct1002",
+      "ct1003",
+      "ct1004"
+    ],
+    "communityIds": [],
+    "isActive": true,
+    "sort": 4,
+    "updatedAt": "2026-03-10T00:00:00.000Z"
+  }
+]

@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "订单列表",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "empty-state": "../../components/empty-state/index",
-    "status-tag": "../../components/status-tag/index"
-  }
-}

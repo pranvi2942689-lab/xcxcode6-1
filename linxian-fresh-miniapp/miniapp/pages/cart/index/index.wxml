@@ -1,0 +1,32 @@
+<view class="page page--safe">
+  <block wx:if="{{!hasLogin}}">
+    <empty-state title="登录后查看购物车" desc="支持加购、结算与订单同步" actionText="去登录" bind:action="goLogin" />
+  </block>
+
+  <block wx:elif="{{!cartData.items.length}}">
+    <empty-state title="购物车还是空的" desc="去首页挑选新鲜食材吧" actionText="去逛逛" bind:action="goHome" />
+  </block>
+
+  <block wx:else>
+    <view wx:for="{{cartData.items}}" wx:key="id" class="cart-item card">
+      <view class="cart-item__check" data-item="{{item}}" bindtap="changeChecked">{{item.checked ? '✓' : ''}}</view>
+      <image class="cart-item__image" src="{{item.goods.cover}}" mode="aspectFill" />
+      <view class="cart-item__body">
+        <view class="cart-item__name">{{item.goods.name}}</view>
+        <view class="cart-item__spec">{{item.goods.specText}}</view>
+        <view class="cart-item__bottom">
+          <view class="cart-item__price">¥{{item.goods.price}}</view>
+          <quantity-stepper value="{{item.quantity}}" max="{{item.goods.stock}}" data-item="{{item}}" bind:change="changeQuantity" />
+        </view>
+      </view>
+      <view class="cart-item__delete" data-item="{{item}}" bindtap="removeItem">删除</view>
+    </view>
+
+    <view wx:if="{{cartData.invalidItems.length}}" class="card invalid-box">
+      <view class="invalid-box__title">失效商品</view>
+      <view wx:for="{{cartData.invalidItems}}" wx:key="id" class="invalid-box__item">{{item.goods ? item.goods.name : '商品已失效'}}</view>
+    </view>
+
+    <bottom-action-bar leftText="合计 ¥{{cartData.summary.totalAmount}}" leftSubText="已选 {{cartData.summary.totalCount}} 件" buttonText="去结算" bind:submit="goCheckout" />
+  </block>
+</view>

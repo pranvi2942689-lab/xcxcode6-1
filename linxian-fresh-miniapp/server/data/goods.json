@@ -1,0 +1,536 @@
+[
+  {
+    "id": "g1001",
+    "name": "云南高山菠菜",
+    "subtitle": "叶片鲜嫩，涮煮清甜",
+    "categoryId": "cat1001",
+    "cover": "/static/mock/goods-spinach.svg",
+    "images": [
+      "/static/mock/goods-spinach.svg"
+    ],
+    "unit": "份",
+    "specText": "300g/份",
+    "price": 6.8,
+    "originalPrice": 8.9,
+    "stock": 160,
+    "soldCount": 632,
+    "tags": [
+      "当季鲜蔬",
+      "绿叶菜"
+    ],
+    "isHot": true,
+    "isNew": true,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-spinach.svg"
+    ],
+    "desc": "清晨采收冷链入仓，适合清炒、火锅、煮面。",
+    "nutritionInfo": "富含膳食纤维、叶酸、铁元素",
+    "storageTips": "冷藏保存 0-4℃，建议 2 天内食用",
+    "sectionTypes": [
+      "today_recommend",
+      "hot_sale"
+    ],
+    "sort": 1,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1002",
+    "name": "沙瓤番茄",
+    "subtitle": "自然熟成，汁多味浓",
+    "categoryId": "cat1001",
+    "cover": "/static/mock/goods-tomato.svg",
+    "images": [
+      "/static/mock/goods-tomato.svg"
+    ],
+    "unit": "袋",
+    "specText": "500g/袋",
+    "price": 7.9,
+    "originalPrice": 9.9,
+    "stock": 120,
+    "soldCount": 518,
+    "tags": [
+      "酸甜多汁"
+    ],
+    "isHot": true,
+    "isNew": false,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002",
+      "c1003"
+    ],
+    "detailImages": [
+      "/static/mock/goods-tomato.svg"
+    ],
+    "desc": "适合凉拌、炒蛋、做汤。",
+    "nutritionInfo": "富含番茄红素和维生素 C",
+    "storageTips": "常温通风保存，熟透后冷藏",
+    "sectionTypes": [
+      "today_recommend"
+    ],
+    "sort": 2,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1003",
+    "name": "即食牛油果",
+    "subtitle": "软糯绵密，沙拉好搭档",
+    "categoryId": "cat1001",
+    "cover": "/static/mock/goods-avocado.svg",
+    "images": [
+      "/static/mock/goods-avocado.svg"
+    ],
+    "unit": "个",
+    "specText": "2 枚装",
+    "price": 15.9,
+    "originalPrice": 18.9,
+    "stock": 84,
+    "soldCount": 246,
+    "tags": [
+      "轻食搭配",
+      "进口鲜果"
+    ],
+    "isHot": false,
+    "isNew": true,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-avocado.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "newcomer",
+      "today_recommend"
+    ],
+    "sort": 3,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1004",
+    "name": "赣南脐橙",
+    "subtitle": "果肉细嫩，酸甜平衡",
+    "categoryId": "cat1001",
+    "cover": "/static/mock/goods-orange.svg",
+    "images": [
+      "/static/mock/goods-orange.svg"
+    ],
+    "unit": "箱",
+    "specText": "4 斤礼盒装",
+    "price": 29.9,
+    "originalPrice": 39.9,
+    "stock": 58,
+    "soldCount": 308,
+    "tags": [
+      "水果爆款",
+      "家庭装"
+    ],
+    "isHot": true,
+    "isNew": false,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-orange.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "hot_sale",
+      "community_group"
+    ],
+    "sort": 4,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1005",
+    "name": "鲜活白虾仁",
+    "subtitle": "净虾处理，炒菜火锅都方便",
+    "categoryId": "cat1002",
+    "cover": "/static/mock/goods-shrimp.svg",
+    "images": [
+      "/static/mock/goods-shrimp.svg"
+    ],
+    "unit": "盒",
+    "specText": "250g/盒",
+    "price": 26.9,
+    "originalPrice": 32.9,
+    "stock": 66,
+    "soldCount": 201,
+    "tags": [
+      "家庭爆款",
+      "净菜净肉"
+    ],
+    "isHot": false,
+    "isNew": true,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-shrimp.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "today_recommend",
+      "community_group"
+    ],
+    "sort": 5,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1006",
+    "name": "谷饲肥牛卷",
+    "subtitle": "火锅涮肉优选",
+    "categoryId": "cat1002",
+    "cover": "/static/mock/goods-beef.svg",
+    "images": [
+      "/static/mock/goods-beef.svg"
+    ],
+    "unit": "盒",
+    "specText": "300g/盒",
+    "price": 38.9,
+    "originalPrice": 45.9,
+    "stock": 90,
+    "soldCount": 414,
+    "tags": [
+      "肉类热卖",
+      "冷鲜"
+    ],
+    "isHot": true,
+    "isNew": false,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-beef.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "hot_sale",
+      "flash_sale"
+    ],
+    "sort": 6,
+    "updatedAt": "2026-03-11T22:32:38.926Z"
+  },
+  {
+    "id": "g1007",
+    "name": "林间散养鲜鸡蛋",
+    "subtitle": "蛋黄饱满，适合全家早餐",
+    "categoryId": "cat1002",
+    "cover": "/static/mock/goods-egg.svg",
+    "images": [
+      "/static/mock/goods-egg.svg"
+    ],
+    "unit": "盒",
+    "specText": "10 枚装",
+    "price": 12.9,
+    "originalPrice": 15.9,
+    "stock": 140,
+    "soldCount": 520,
+    "tags": [
+      "早餐必备"
+    ],
+    "isHot": true,
+    "isNew": false,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002",
+      "c1003"
+    ],
+    "detailImages": [
+      "/static/mock/goods-egg.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "today_recommend",
+      "community_group"
+    ],
+    "sort": 7,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1008",
+    "name": "娟姗鲜牛奶",
+    "subtitle": "巴氏鲜奶，每日冷链送达",
+    "categoryId": "cat1004",
+    "cover": "/static/mock/goods-milk.svg",
+    "images": [
+      "/static/mock/goods-milk.svg"
+    ],
+    "unit": "瓶",
+    "specText": "950ml/瓶",
+    "price": 16.8,
+    "originalPrice": 19.8,
+    "stock": 76,
+    "soldCount": 278,
+    "tags": [
+      "早餐搭配",
+      "冷链直送"
+    ],
+    "isHot": false,
+    "isNew": true,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-milk.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "newcomer"
+    ],
+    "sort": 8,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1009",
+    "name": "五常香米",
+    "subtitle": "米香浓郁，家庭常备",
+    "categoryId": "cat1003",
+    "cover": "/static/mock/goods-rice.svg",
+    "images": [
+      "/static/mock/goods-rice.svg"
+    ],
+    "unit": "袋",
+    "specText": "5kg/袋",
+    "price": 59.9,
+    "originalPrice": 69.9,
+    "stock": 45,
+    "soldCount": 192,
+    "tags": [
+      "主食常备"
+    ],
+    "isHot": false,
+    "isNew": false,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002",
+      "c1003"
+    ],
+    "detailImages": [
+      "/static/mock/goods-rice.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "community_group"
+    ],
+    "sort": 9,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1010",
+    "name": "压榨花生油",
+    "subtitle": "厨房常备，浓香不腻",
+    "categoryId": "cat1003",
+    "cover": "/static/mock/goods-oil.svg",
+    "images": [
+      "/static/mock/goods-oil.svg"
+    ],
+    "unit": "桶",
+    "specText": "1.8L/桶",
+    "price": 49.9,
+    "originalPrice": 58.9,
+    "stock": 33,
+    "soldCount": 123,
+    "tags": [
+      "粮油"
+    ],
+    "isHot": false,
+    "isNew": false,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-oil.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "community_group"
+    ],
+    "sort": 10,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1011",
+    "name": "北豆腐",
+    "subtitle": "当天现制，适合炖煮煎炒",
+    "categoryId": "cat1003",
+    "cover": "/static/mock/goods-tofu.svg",
+    "images": [
+      "/static/mock/goods-tofu.svg"
+    ],
+    "unit": "盒",
+    "specText": "400g/盒",
+    "price": 4.9,
+    "originalPrice": 5.9,
+    "stock": 0,
+    "soldCount": 167,
+    "tags": [
+      "豆制品"
+    ],
+    "isHot": false,
+    "isNew": false,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-tofu.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "today_recommend"
+    ],
+    "sort": 11,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1012",
+    "name": "原味酸奶杯",
+    "subtitle": "低糖配方，饭后轻负担",
+    "categoryId": "cat1004",
+    "cover": "/static/mock/goods-yogurt.svg",
+    "images": [
+      "/static/mock/goods-yogurt.svg"
+    ],
+    "unit": "组",
+    "specText": "135g/杯*4",
+    "price": 18.9,
+    "originalPrice": 21.9,
+    "stock": 58,
+    "soldCount": 146,
+    "tags": [
+      "下午茶",
+      "家庭装"
+    ],
+    "isHot": false,
+    "isNew": true,
+    "isOffline": true,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-yogurt.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "newcomer"
+    ],
+    "sort": 12,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1013",
+    "name": "低泡洗洁精",
+    "subtitle": "厨房去油污，家庭常备",
+    "categoryId": "cat1003",
+    "cover": "/static/mock/goods-detergent.svg",
+    "images": [
+      "/static/mock/goods-detergent.svg"
+    ],
+    "unit": "瓶",
+    "specText": "1kg/瓶",
+    "price": 13.9,
+    "originalPrice": 16.9,
+    "stock": 36,
+    "soldCount": 88,
+    "tags": [
+      "百货"
+    ],
+    "isHot": false,
+    "isNew": false,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-detergent.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "community_group"
+    ],
+    "sort": 13,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "g1014",
+    "name": "黄心土豆",
+    "subtitle": "绵软面香，炖煮炒菜都合适",
+    "categoryId": "cat1001",
+    "cover": "/static/mock/goods-potato.svg",
+    "images": [
+      "/static/mock/goods-potato.svg"
+    ],
+    "unit": "袋",
+    "specText": "1kg/袋",
+    "price": 5.6,
+    "originalPrice": 6.8,
+    "stock": 120,
+    "soldCount": 296,
+    "tags": [
+      "家常菜"
+    ],
+    "isHot": true,
+    "isNew": false,
+    "isOffline": false,
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "detailImages": [
+      "/static/mock/goods-potato.svg"
+    ],
+    "desc": "",
+    "nutritionInfo": "",
+    "storageTips": "",
+    "sectionTypes": [
+      "hot_sale"
+    ],
+    "sort": 14,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  }
+]

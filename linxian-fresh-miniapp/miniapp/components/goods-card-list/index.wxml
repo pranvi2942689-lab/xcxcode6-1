@@ -1,0 +1,15 @@
+<view class="goods-list card" bindtap="handleTap">
+  <image class="goods-list__image" src="{{goods.cover}}" mode="aspectFill" />
+  <view class="goods-list__body">
+    <view class="goods-list__name">{{goods.name}}</view>
+    <view class="goods-list__subtitle">{{goods.subtitle}}</view>
+    <view class="goods-list__spec">{{goods.specText}}</view>
+    <view class="goods-list__bottom">
+      <view>
+        <view class="goods-list__price">¥{{goods.price}}</view>
+        <view class="goods-list__sold">已售 {{goods.soldCount}}</view>
+      </view>
+      <view wx:if="{{showAction}}" class="goods-list__add" catchtap="handleAdd">{{actionText}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view class="page page--safe">
+  <view class="card card-pad">
+    <view class="input-title">关联订单</view>
+    <picker range="{{orders}}" range-key="orderNo" bindchange="bindPickerChange">
+      <view class="input-shell">{{selectedOrderText}}</view>
+    </picker>
+    <view class="input-title">问题类型</view>
+    <picker range="{{typeOptions}}" range-key="label" bindchange="bindTypeChange">
+      <view class="input-shell">{{form.type}}</view>
+    </picker>
+    <view class="input-title">问题描述</view>
+    <textarea class="remark-box" data-key="reason" bindinput="handleInput" value="{{form.reason}}" placeholder="请描述商品或配送问题" />
+    <view class="input-title">补充说明</view>
+    <textarea class="remark-box" data-key="remark" bindinput="handleInput" value="{{form.remark}}" placeholder="可补充联系方式、期望处理方式等" />
+    <view class="submit-btn" bindtap="submit">提交售后申请</view>
+  </view>
+
+  <view class="card card-pad section-gap">
+    <view class="text-title">售后记录</view>
+    <view wx:for="{{tickets}}" wx:key="id" class="ticket-item">
+      <view class="ticket-item__head">
+        <view>{{item.orderNo}}</view>
+        <view class="text-muted">{{item.status}}</view>
+      </view>
+      <view class="ticket-item__body">{{item.reason}}</view>
+      <view class="ticket-item__reply" wx:if="{{item.reply}}">客服回复：{{item.reply}}</view>
+    </view>
+  </view>
+</view>

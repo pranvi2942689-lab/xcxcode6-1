@@ -1,0 +1,43 @@
+.community {
+  padding: 20rpx;
+}
+
+.community--selected {
+  border: 2rpx solid #22b45a;
+}
+
+.community__head,
+.community__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.community__name {
+  color: #1f2a37;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.community__status {
+  padding: 8rpx 18rpx;
+  border-radius: 999rpx;
+  font-size: 20rpx;
+}
+
+.community__status.is-open {
+  background: #eaf8ef;
+  color: #22b45a;
+}
+
+.community__status.is-close {
+  background: #eef1f4;
+  color: #8a94a6;
+}
+
+.community__desc,
+.community__foot {
+  margin-top: 12rpx;
+  color: #8a94a6;
+  font-size: 22rpx;
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "id": "b1001",
+    "title": "新鲜直采",
+    "image": "/static/mock/banner-fresh.svg",
+    "linkType": "goodsList",
+    "linkValue": "today_recommend",
+    "communityIds": [],
+    "isActive": true,
+    "sort": 1,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "b1002",
+    "title": "鲜果早市",
+    "image": "/static/mock/banner-fruit.svg",
+    "linkType": "category",
+    "linkValue": "cat1001",
+    "communityIds": [],
+    "isActive": true,
+    "sort": 2,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "b1003",
+    "title": "社区拼团",
+    "image": "/static/mock/banner-group.svg",
+    "linkType": "goodsList",
+    "linkValue": "community_group",
+    "communityIds": [
+      "c1001",
+      "c1002"
+    ],
+    "isActive": true,
+    "sort": 3,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "b1004",
+    "title": "限时秒杀",
+    "image": "/static/mock/banner-sale.svg",
+    "linkType": "goodsList",
+    "linkValue": "flash_sale",
+    "communityIds": [],
+    "isActive": true,
+    "sort": 4,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "b1005",
+    "title": "新人礼包",
+    "image": "/static/mock/banner-newcomer.svg",
+    "linkType": "newcomer",
+    "linkValue": "newcomer",
+    "communityIds": [],
+    "isActive": true,
+    "sort": 5,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "b1006",
+    "title": "到家配送",
+    "image": "/static/mock/banner-delivery.svg",
+    "linkType": "content",
+    "linkValue": "ct1004",
+    "communityIds": [],
+    "isActive": true,
+    "sort": 6,
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  }
+]

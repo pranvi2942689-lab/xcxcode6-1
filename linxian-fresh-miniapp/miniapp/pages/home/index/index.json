@@ -1,0 +1,12 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "search-bar": "/components/search-bar/index",
+    "notice-bar": "/components/notice-bar/index",
+    "promo-banner": "/components/promo-banner/index",
+    "section-header": "/components/section-header/index",
+    "goods-card-grid": "/components/goods-card-grid/index",
+    "empty-state": "/components/empty-state/index",
+    "skeleton-block": "/components/skeleton-block/index"
+  }
+}

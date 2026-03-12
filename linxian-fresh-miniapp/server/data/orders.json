@@ -1,0 +1,362 @@
+[
+  {
+    "id": "order_1773268358926_vsb1us",
+    "orderNo": "LX202603120632382262",
+    "userId": "u1001",
+    "communityId": "c1001",
+    "addressId": "addr1001",
+    "addressSnapshot": {
+      "id": "addr1001",
+      "userId": "u1001",
+      "name": "王小满",
+      "phone": "13800000001",
+      "communityId": "c1001",
+      "communityName": "锦绣花园社区",
+      "detail": "锦绣花园 8 号楼",
+      "houseNumber": "802",
+      "tag": "家",
+      "isDefault": true,
+      "createdAt": "2026-02-20T00:00:00.000Z",
+      "updatedAt": "2026-03-11T00:00:00.000Z"
+    },
+    "items": [
+      {
+        "goodsId": "g1006",
+        "name": "谷饲肥牛卷",
+        "cover": "/static/mock/goods-beef.svg",
+        "price": 38.9,
+        "originalPrice": 45.9,
+        "specText": "300g/盒",
+        "unit": "盒",
+        "quantity": 2,
+        "subtotal": 77.8
+      }
+    ],
+    "goodsAmount": 77.8,
+    "discountAmount": 0,
+    "deliveryFee": 0,
+    "payableAmount": 77.8,
+    "status": "pending_delivery",
+    "couponId": "",
+    "userCouponId": "",
+    "deliverySlot": "?? 18:00-20:00",
+    "remark": "",
+    "createdAt": "2026-03-11T22:32:38.926Z",
+    "updatedAt": "2026-03-11T22:32:38.934Z",
+    "payInfo": {
+      "payAt": "2026-03-11T22:32:38.934Z",
+      "channel": "mock_wechat_pay",
+      "tradeNo": "trade_1773268358934_zlcznd"
+    }
+  },
+  {
+    "id": "o1001",
+    "orderNo": "LX2026031109301001",
+    "userId": "u1001",
+    "communityId": "c1001",
+    "addressId": "addr1001",
+    "addressSnapshot": {
+      "name": "王小满",
+      "phone": "13800000001",
+      "communityName": "锦绣花园社区",
+      "detail": "锦绣花园 8 号楼",
+      "houseNumber": "802"
+    },
+    "items": [
+      {
+        "goodsId": "g1001",
+        "name": "云南高山菠菜",
+        "cover": "/static/mock/goods-spinach.svg",
+        "price": 6.8,
+        "originalPrice": 8.9,
+        "specText": "300g/份",
+        "unit": "份",
+        "quantity": 2,
+        "subtotal": 13.6
+      }
+    ],
+    "goodsAmount": 13.6,
+    "discountAmount": 0,
+    "deliveryFee": 4,
+    "payableAmount": 17.6,
+    "status": "pending_payment",
+    "couponId": "",
+    "userCouponId": "",
+    "deliverySlot": "今天 18:00-20:00",
+    "remark": "到门请电话联系",
+    "createdAt": "2026-03-11T00:00:00.000Z",
+    "updatedAt": "2026-03-11T00:00:00.000Z"
+  },
+  {
+    "id": "o1002",
+    "orderNo": "LX2026030208101002",
+    "userId": "u1001",
+    "communityId": "c1001",
+    "addressId": "addr1001",
+    "addressSnapshot": {
+      "name": "王小满",
+      "phone": "13800000001",
+      "communityName": "锦绣花园社区",
+      "detail": "锦绣花园 8 号楼",
+      "houseNumber": "802"
+    },
+    "items": [
+      {
+        "goodsId": "g1006",
+        "name": "谷饲肥牛卷",
+        "cover": "/static/mock/goods-beef.svg",
+        "price": 38.9,
+        "originalPrice": 45.9,
+        "specText": "300g/盒",
+        "unit": "盒",
+        "quantity": 2,
+        "subtotal": 77.8
+      }
+    ],
+    "goodsAmount": 77.8,
+    "discountAmount": 15,
+    "deliveryFee": 0,
+    "payableAmount": 62.8,
+    "status": "pending_delivery",
+    "couponId": "cp1002",
+    "userCouponId": "uc1002",
+    "deliverySlot": "今天 10:00-12:00",
+    "remark": "",
+    "createdAt": "2026-03-02T00:00:00.000Z",
+    "updatedAt": "2026-03-02T00:00:00.000Z",
+    "payInfo": {
+      "payAt": "2026-03-02T00:00:00.000Z",
+      "channel": "mock_wechat_pay",
+      "tradeNo": "trade-1002"
+    }
+  },
+  {
+    "id": "o1003",
+    "orderNo": "LX2026030509101003",
+    "userId": "u1001",
+    "communityId": "c1001",
+    "addressId": "addr1002",
+    "addressSnapshot": {
+      "name": "王小满",
+      "phone": "13800000001",
+      "communityName": "锦绣花园社区",
+      "detail": "锦绣花园 12 号楼",
+      "houseNumber": "1201"
+    },
+    "items": [
+      {
+        "goodsId": "g1005",
+        "name": "鲜活白虾仁",
+        "cover": "/static/mock/goods-shrimp.svg",
+        "price": 26.9,
+        "originalPrice": 32.9,
+        "specText": "250g/盒",
+        "unit": "盒",
+        "quantity": 2,
+        "subtotal": 53.8
+      }
+    ],
+    "goodsAmount": 53.8,
+    "discountAmount": 0,
+    "deliveryFee": 0,
+    "payableAmount": 53.8,
+    "status": "delivering",
+    "couponId": "",
+    "userCouponId": "",
+    "deliverySlot": "今天 12:00-14:00",
+    "remark": "",
+    "createdAt": "2026-03-06T00:00:00.000Z",
+    "updatedAt": "2026-03-07T00:00:00.000Z"
+  },
+  {
+    "id": "o1004",
+    "orderNo": "LX2026022608101004",
+    "userId": "u1001",
+    "communityId": "c1001",
+    "addressId": "addr1001",
+    "addressSnapshot": {
+      "name": "王小满",
+      "phone": "13800000001",
+      "communityName": "锦绣花园社区",
+      "detail": "锦绣花园 8 号楼",
+      "houseNumber": "802"
+    },
+    "items": [
+      {
+        "goodsId": "g1007",
+        "name": "林间散养鲜鸡蛋",
+        "cover": "/static/mock/goods-egg.svg",
+        "price": 12.9,
+        "originalPrice": 15.9,
+        "specText": "10 枚装",
+        "unit": "盒",
+        "quantity": 2,
+        "subtotal": 25.8
+      }
+    ],
+    "goodsAmount": 25.8,
+    "discountAmount": 0,
+    "deliveryFee": 4,
+    "payableAmount": 29.8,
+    "status": "completed",
+    "couponId": "",
+    "userCouponId": "",
+    "deliverySlot": "今天 08:00-10:00",
+    "remark": "",
+    "createdAt": "2026-02-26T00:00:00.000Z",
+    "updatedAt": "2026-02-27T00:00:00.000Z"
+  },
+  {
+    "id": "o1005",
+    "orderNo": "LX2026022408101005",
+    "userId": "u1002",
+    "communityId": "c1002",
+    "addressId": "addr1003",
+    "addressSnapshot": {
+      "name": "李橙橙",
+      "phone": "13800000002",
+      "communityName": "春申里社区",
+      "detail": "春申里 2 期",
+      "houseNumber": "6-302"
+    },
+    "items": [
+      {
+        "goodsId": "g1003",
+        "name": "即食牛油果",
+        "cover": "/static/mock/goods-avocado.svg",
+        "price": 15.9,
+        "originalPrice": 18.9,
+        "specText": "2 枚装",
+        "unit": "个",
+        "quantity": 2,
+        "subtotal": 31.8
+      }
+    ],
+    "goodsAmount": 31.8,
+    "discountAmount": 0,
+    "deliveryFee": 5,
+    "payableAmount": 36.8,
+    "status": "cancelled",
+    "couponId": "",
+    "userCouponId": "",
+    "deliverySlot": "今天 16:00-18:00",
+    "remark": "",
+    "createdAt": "2026-02-24T00:00:00.000Z",
+    "updatedAt": "2026-02-24T00:00:00.000Z",
+    "cancelReason": "计划有变"
+  },
+  {
+    "id": "o1006",
+    "orderNo": "LX2026030408101006",
+    "userId": "u1002",
+    "communityId": "c1002",
+    "addressId": "addr1003",
+    "addressSnapshot": {
+      "name": "李橙橙",
+      "phone": "13800000002",
+      "communityName": "春申里社区",
+      "detail": "春申里 2 期",
+      "houseNumber": "6-302"
+    },
+    "items": [
+      {
+        "goodsId": "g1009",
+        "name": "五常香米",
+        "cover": "/static/mock/goods-rice.svg",
+        "price": 59.9,
+        "originalPrice": 69.9,
+        "specText": "5kg/袋",
+        "unit": "袋",
+        "quantity": 2,
+        "subtotal": 119.8
+      }
+    ],
+    "goodsAmount": 119.8,
+    "discountAmount": 20,
+    "deliveryFee": 0,
+    "payableAmount": 99.8,
+    "status": "refunding",
+    "couponId": "cp1004",
+    "userCouponId": "uc1005",
+    "deliverySlot": "明天 09:00-11:00",
+    "remark": "门口可放",
+    "createdAt": "2026-03-04T00:00:00.000Z",
+    "updatedAt": "2026-03-05T00:00:00.000Z"
+  },
+  {
+    "id": "o1007",
+    "orderNo": "LX2026030808101007",
+    "userId": "u1003",
+    "communityId": "c1003",
+    "addressId": "addr1004",
+    "addressSnapshot": {
+      "name": "赵团团",
+      "phone": "13800000003",
+      "communityName": "星河家园社区",
+      "detail": "星河家园东区",
+      "houseNumber": "3-602"
+    },
+    "items": [
+      {
+        "goodsId": "g1002",
+        "name": "沙瓤番茄",
+        "cover": "/static/mock/goods-tomato.svg",
+        "price": 7.9,
+        "originalPrice": 9.9,
+        "specText": "500g/袋",
+        "unit": "袋",
+        "quantity": 5,
+        "subtotal": 39.5
+      }
+    ],
+    "goodsAmount": 39.5,
+    "discountAmount": 0,
+    "deliveryFee": 0,
+    "payableAmount": 39.5,
+    "status": "pending_delivery",
+    "couponId": "",
+    "userCouponId": "",
+    "deliverySlot": "次日 07:30-09:00",
+    "remark": "",
+    "createdAt": "2026-03-08T00:00:00.000Z",
+    "updatedAt": "2026-03-09T00:00:00.000Z"
+  },
+  {
+    "id": "o1008",
+    "orderNo": "LX2026022008101008",
+    "userId": "u1001",
+    "communityId": "c1001",
+    "addressId": "addr1001",
+    "addressSnapshot": {
+      "name": "王小满",
+      "phone": "13800000001",
+      "communityName": "锦绣花园社区",
+      "detail": "锦绣花园 8 号楼",
+      "houseNumber": "802"
+    },
+    "items": [
+      {
+        "goodsId": "g1004",
+        "name": "赣南脐橙",
+        "cover": "/static/mock/goods-orange.svg",
+        "price": 29.9,
+        "originalPrice": 39.9,
+        "specText": "4 斤礼盒装",
+        "unit": "箱",
+        "quantity": 1,
+        "subtotal": 29.9
+      }
+    ],
+    "goodsAmount": 29.9,
+    "discountAmount": 0,
+    "deliveryFee": 4,
+    "payableAmount": 33.9,
+    "status": "completed",
+    "couponId": "",
+    "userCouponId": "",
+    "deliverySlot": "今天 17:00-19:00",
+    "remark": "",
+    "createdAt": "2026-02-20T00:00:00.000Z",
+    "updatedAt": "2026-02-20T00:00:00.000Z"
+  }
+]

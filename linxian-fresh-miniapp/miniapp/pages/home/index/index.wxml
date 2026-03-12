@@ -1,0 +1,53 @@
+<view class="page page--safe">
+  <view class="home-hero card">
+    <view class="home-top">
+      <view bindtap="goCommunity">
+        <view class="home-location">{{currentCommunity ? currentCommunity.name : '选择服务社区'}} ▼</view>
+        <view class="home-location-sub">{{currentCommunity ? currentCommunity.deliveryDesc : '支持定位后切换社区'}}</view>
+      </view>
+    </view>
+    <search-bar value="" placeholder="搜索蔬菜水果、肉禽蛋奶" showAction="{{false}}" bind:tap="goSearch" bind:search="goSearch" />
+  </view>
+
+  <notice-bar text="{{noticeText}}" bind:tap="goNotice" />
+
+  <view wx:if="{{loading}}">
+    <skeleton-block height="260rpx" />
+  </view>
+
+  <swiper wx:else class="banner-swiper section-gap" autoplay circular indicator-dots>
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <promo-banner item="{{item}}" bind:tap="openBanner" />
+    </swiper-item>
+  </swiper>
+
+  <view class="entry-grid card section-gap">
+    <view wx:for="{{quickEntries}}" wx:key="key" class="entry-item" data-item="{{item}}" bindtap="handleEntry">
+      <view class="entry-icon">{{item.icon}}</view>
+      <view class="entry-text">{{item.title}}</view>
+    </view>
+  </view>
+
+  <view class="newcomer card section-gap" bindtap="goNewcomer">
+    <view class="newcomer__head">
+      <view class="text-title">新人礼包</view>
+      <view class="newcomer__link">立即领取</view>
+    </view>
+    <view class="newcomer__cards">
+      <view wx:for="{{newcomerCards}}" wx:key="id" class="newcomer__item">
+        <view class="newcomer__amount">{{item.title}}</view>
+        <view class="newcomer__desc">{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+
+  <block wx:for="{{sections}}" wx:key="id">
+    <view class="section-gap">
+      <section-header title="{{item.title}}" subtitle="{{item.subtitle}}" showAction actionText="查看全部" bind:action="goSection" data-item="{{item}}" />
+      <view wx:if="{{item.goodsList && item.goodsList.length}}" class="goods-grid">
+        <goods-card-grid wx:for="{{item.goodsList}}" wx:key="id" goods="{{item}}" bind:tap="goGoods" bind:add="addCart" />
+      </view>
+      <empty-state wx:else title="该专区暂无商品" desc="换个社区再看看" />
+    </view>
+  </block>
+</view>

@@ -1,0 +1,29 @@
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rpx 18rpx;
+  border-radius: 999rpx;
+  font-size: 22rpx;
+  font-weight: 600;
+}
+
+.status-tag--success {
+  color: #22b45a;
+  background: #eaf8ef;
+}
+
+.status-tag--warning {
+  color: #ff9f1a;
+  background: #fff4e4;
+}
+
+.status-tag--danger {
+  color: #f04438;
+  background: #fff1ef;
+}
+
+.status-tag--plain {
+  color: #4b5563;
+  background: #eef1f4;
+}
