@@ -1,7 +1,0 @@
-<view class="search-bar" bindtap="handleTap">
-  <view class="search-bar__inner">
-    <text class="search-bar__icon">🔍</text>
-    <input class="search-bar__input" value="{{value}}" placeholder="{{placeholder}}" placeholder-class="search-bar__placeholder" confirm-type="search" bindinput="handleInput" bindconfirm="handleConfirm" />
-  </view>
-  <view wx:if="{{showAction}}" class="search-bar__action" bindtap="handleAction">{{actionText}}</view>
-</view>

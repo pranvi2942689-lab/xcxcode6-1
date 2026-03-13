@@ -1,3 +1,0 @@
-<view class="promo-banner" bindtap="handleTap">
-  <image class="promo-banner__image" src="{{item.image}}" mode="aspectFill" />
-</view>

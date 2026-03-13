@@ -1,4 +1,0 @@
-<view class="page">
-  <goods-card-list wx:for="{{list}}" wx:key="id" goods="{{item}}" showAction="{{false}}" bind:tap="goDetail" />
-  <empty-state wx:if="{{!list.length}}" title="还没有浏览记录" desc="浏览过的商品会显示在这里" />
-</view>

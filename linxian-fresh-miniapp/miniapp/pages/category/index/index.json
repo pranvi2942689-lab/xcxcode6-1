@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "分类",
-  "usingComponents": {
-    "goods-card-grid": "/components/goods-card-grid/index",
-    "empty-state": "/components/empty-state/index"
-  }
-}

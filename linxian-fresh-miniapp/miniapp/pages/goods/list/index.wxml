@@ -1,7 +1,0 @@
-<view class="page page--safe">
-  <filter-tabs tabs="{{tabs}}" value="{{sortType}}" bind:change="changeTab" />
-  <view wx:if="{{goodsList.length}}" class="goods-grid section-gap">
-    <goods-card-grid wx:for="{{goodsList}}" wx:key="id" goods="{{item}}" bind:tap="goDetail" bind:add="addCart" />
-  </view>
-  <empty-state wx:else title="暂无商品" desc="换个筛选条件看看" />
-</view>

@@ -1,8 +1,0 @@
-<view class="page">
-  <view class="card card-pad newcomer-top">
-    <view class="text-title">新人专享礼包</view>
-    <view class="text-muted">首单常用券包一次领齐，适合买菜高频场景</view>
-    <view class="newcomer-btn" bindtap="claimAll">一键领取</view>
-  </view>
-  <coupon-card wx:for="{{coupons}}" wx:key="id" coupon="{{item}}" />
-</view>

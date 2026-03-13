@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "商品详情",
-  "usingComponents": {
-    "quantity-stepper": "/components/quantity-stepper/index",
-    "bottom-action-bar": "/components/bottom-action-bar/index",
-    "option-popup": "/components/option-popup/index"
-  }
-}

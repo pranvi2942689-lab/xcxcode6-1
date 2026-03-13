@@ -1,46 +1,42 @@
-name: Deploy to Server
+
+
+name: Deploy Miniapp Server
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [ "main" ] # 确保你推送的分支名是 main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Login to Tencent TCR
-        # 这里用你的账号密码登录腾讯云
-        run: echo "${{ secrets.REGISTRY_PASS }}" | docker login ccr.ccs.tencentyun.com -u "${{ secrets.REGISTRY_USER }}" --password-stdin
-
-      - name: Build Docker Image
-        # 打包镜像，明确使用正确的腾讯云 TCR 网址
-        run: docker build -t ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest .
-
-      - name: Push Docker Image
-        # 把打包好的镜像推送到腾讯云
-        run: docker push ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest
-
-      - name: Deploy to Server
-        uses: appleboy/ssh-action@v0.1.10
-        # 【关键修复】通过 env 把机密变量安全地传过去，防止特殊符号变乱码
-        env:
-          USER_NAME: ${{ secrets.REGISTRY_USER }}
-          USER_PASS: ${{ secrets.REGISTRY_PASS }}
+      # 1. 登录腾讯云镜像仓库
+      - name: Login to Tencent Registry
+        uses: docker/login-action@v2
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: root
-          password: ${{ secrets.SERVER_PASS }}
-          envs: USER_NAME,USER_PASS
+          registry: ccr.ccs.tencentyun.com
+          username: ${{ secrets.REGISTRY_USER }}
+          password: ${{ secrets.REGISTRY_PASS }}
+
+      # 2. 打包并推送到你的 my-studio 镜像仓库
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest .
+          docker push ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest
+
+      # 3. 自动 SSH 登录你的服务器，拉取最新镜像并重启
+      - name: Deploy to Tencent Cloud Server
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ubuntu # 你的服务器账号
+          password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            # 使用转交过来的安全变量进行登录
-            docker login ccr.ccs.tencentyun.com -u "$USER_NAME" -p "$USER_PASS"
-            docker pull ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest
-            docker stop miniapp-server || true
-            docker rm miniapp-server || true
-            docker run -d --name miniapp-server -p 3000:3000 ccr.ccs.tencentyun.com/my-studio/miniapp-server:latest
+            cd /opt/miniapp-server
+            docker login -u ${{ secrets.REGISTRY_USER }} -p ${{ secrets.REGISTRY_PASS }} ccr.ccs.tencentyun.com
+            docker-compose pull backend
+            docker-compose up -d --remove-orphans
+            docker image prune -f # 清理旧镜像释放空间

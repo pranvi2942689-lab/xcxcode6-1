@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "新人礼包",
-  "usingComponents": {
-    "coupon-card": "/components/coupon-card/index"
-  }
-}

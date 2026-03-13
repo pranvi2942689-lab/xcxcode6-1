@@ -1,0 +1,15 @@
+page {
+  background: #001b11;
+  color: #ead8b5;
+  font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+
+view,
+text,
+image {
+  box-sizing: border-box;
+}
+
+image {
+  display: block;
+}

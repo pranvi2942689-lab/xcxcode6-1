@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "选择社区",
-  "usingComponents": {
-    "search-bar": "/components/search-bar/index",
-    "community-card": "/components/community-card/index"
-  }
-}

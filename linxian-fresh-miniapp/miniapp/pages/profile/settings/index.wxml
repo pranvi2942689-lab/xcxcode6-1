@@ -1,8 +1,0 @@
-<view class="page">
-  <view class="card card-pad">
-    <view class="setting-item"><text>当前社区</text><text>{{community.name}}</text></view>
-    <view class="setting-item"><text>API_BASE_URL</text><text class="setting-item__value">{{apiBaseUrl}}</text></view>
-    <view class="setting-item"><text>云环境 ID</text><text class="setting-item__value">{{cloudEnvId}}</text></view>
-  </view>
-  <view class="logout-btn section-gap" bindtap="logout">退出登录</view>
-</view>

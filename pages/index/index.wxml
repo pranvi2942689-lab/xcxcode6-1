@@ -1,0 +1,117 @@
+<view class="page">
+  <image
+    class="page__bg"
+    src="{{images.heroBg}}"
+    mode="aspectFill"
+    binderror="handleImageError"
+    data-image-key="heroBg"
+  />
+  <view class="page__shade"></view>
+
+  <view wx:if="{{loadState === 'error'}}" class="cloud-status">
+    <text class="cloud-status__text">{{loadErrorText}}</text>
+  </view>
+
+  <image
+    class="brand-logo"
+    src="{{images.logo}}"
+    mode="aspectFit"
+    style="top: {{layout.brandTop}}px;"
+    binderror="handleImageError"
+    data-image-key="logo"
+  />
+
+  <view class="brand-copy" style="top: {{layout.brandCopyTop}}px;">
+    <text class="brand-copy__title">{{copy.brandTitle}}</text>
+    <view class="brand-copy__location">
+      <text class="brand-copy__location-text">{{copy.location}}</text>
+      <view class="brand-copy__location-arrow"></view>
+    </view>
+  </view>
+
+  <view
+    class="capsule"
+    style="top: {{layout.capsuleTop}}px; right: {{layout.capsuleRight}}px; height: {{layout.capsuleHeight}}px;"
+  >
+    <view class="capsule__more">
+      <view class="capsule__dot"></view>
+      <view class="capsule__dot"></view>
+      <view class="capsule__dot"></view>
+    </view>
+    <view class="capsule__divider"></view>
+    <view class="capsule__ring">
+      <view class="capsule__ring-core"></view>
+    </view>
+  </view>
+
+  <view class="hero" style="top: {{layout.heroTop}}px;">
+    <text class="hero__title">{{copy.heroTitle}}</text>
+  </view>
+
+  <view class="footer-stack" style="padding-bottom: {{layout.safeBottom}}px;">
+    <view class="footer-stack__inner">
+      <view class="quick-actions">
+        <view
+          wx:for="{{quickActions}}"
+          wx:key="key"
+          class="action-card {{item.active ? 'action-card--active' : ''}}"
+          bindtap="handlePlaceholderTap"
+          data-label="{{item.title}}"
+        >
+          <image
+            class="action-card__icon action-card__icon--{{item.key}}"
+            src="{{item.icon}}"
+            mode="aspectFit"
+            binderror="handleImageError"
+            data-image-key="{{item.key}}"
+          />
+          <text class="action-card__text">{{item.title}}</text>
+        </view>
+      </view>
+
+      <view class="promo-banner" bindtap="handlePlaceholderTap" data-label="{{copy.promoLabel}}">
+        <image
+          class="promo-banner__bg"
+          src="{{images.promoBoard}}"
+          mode="scaleToFill"
+          binderror="handleImageError"
+          data-image-key="promoBoard"
+        />
+        <view class="promo-banner__content">
+          <view class="promo-banner__headline">
+            <text class="promo-banner__title">{{copy.promoTitleLeft}}</text>
+            <text class="promo-banner__title">{{copy.promoTitleRight}}</text>
+          </view>
+          <view class="promo-banner__button">
+            <image
+              class="promo-banner__button-bg"
+              src="{{images.claimButton}}"
+              mode="scaleToFill"
+              binderror="handleImageError"
+              data-image-key="claimButton"
+            />
+            <text class="promo-banner__button-text">{{copy.claimText}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="tabbar-shell">
+      <view class="tabbar">
+        <view
+          wx:for="{{tabs}}"
+          wx:key="key"
+          class="tab-item {{item.active ? 'tab-item--active' : ''}}"
+          bindtap="handleTabTap"
+          data-active="{{item.active}}"
+          data-label="{{item.label}}"
+        >
+          <image class="tab-item__icon" src="{{item.icon}}" mode="aspectFit" />
+          <text class="tab-item__label">{{item.label}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="home-indicator"></view>
+  </view>
+</view>

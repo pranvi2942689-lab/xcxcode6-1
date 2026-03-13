@@ -1,0 +1,8 @@
+{
+  "name": "swan-home-server",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  }
+}

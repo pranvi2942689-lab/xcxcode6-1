@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "最近浏览",
-  "usingComponents": {
-    "goods-card-list": "/components/goods-card-list/index",
-    "empty-state": "/components/empty-state/index"
-  }
-}

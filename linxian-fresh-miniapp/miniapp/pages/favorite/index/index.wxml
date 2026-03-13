@@ -1,4 +1,0 @@
-<view class="page">
-  <goods-card-list wx:for="{{list}}" wx:key="id" goods="{{item}}" actionText="取消收藏" bind:tap="goDetail" bind:add="addCart" />
-  <empty-state wx:if="{{!list.length}}" title="还没有收藏商品" desc="遇到喜欢的商品可先收藏" />
-</view>

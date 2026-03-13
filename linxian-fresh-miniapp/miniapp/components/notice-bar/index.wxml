@@ -1,5 +1,0 @@
-<view class="notice-bar" bindtap="handleTap">
-  <text class="notice-bar__icon">📢</text>
-  <text class="notice-bar__text">{{text}}</text>
-  <text class="notice-bar__arrow">›</text>
-</view>

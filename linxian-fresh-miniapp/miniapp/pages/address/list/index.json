@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "地址管理",
-  "usingComponents": {
-    "address-card": "/components/address-card/index",
-    "empty-state": "/components/empty-state/index",
-    "ui-button": "/components/ui-button/index"
-  }
-}

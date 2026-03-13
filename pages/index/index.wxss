@@ -1,0 +1,341 @@
+.page {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #001b11;
+}
+
+.page__bg,
+.page__shade {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.page__bg {
+  width: 100%;
+  height: 100%;
+}
+
+.page__shade {
+  background: linear-gradient(180deg, rgba(0, 15, 9, 0.06) 0%, rgba(0, 15, 9, 0.1) 35%, rgba(0, 15, 9, 0.28) 100%);
+}
+
+.cloud-status {
+  position: absolute;
+  left: 50%;
+  top: 240rpx;
+  z-index: 8;
+  transform: translateX(-50%);
+}
+
+.cloud-status__text {
+  display: block;
+  min-width: 280rpx;
+  padding: 18rpx 26rpx;
+  border: 2rpx solid rgba(234, 216, 181, 0.26);
+  border-radius: 999rpx;
+  background: rgba(8, 30, 20, 0.72);
+  color: #e8d6b2;
+  font-size: 24rpx;
+  line-height: 1;
+  text-align: center;
+}
+
+.brand-logo {
+  position: absolute;
+  left: 48rpx;
+  width: 128rpx;
+  height: 188rpx;
+  z-index: 3;
+}
+
+.brand-copy {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  width: 420rpx;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.brand-copy__title {
+  display: block;
+  color: #d9bf95;
+  font-family: "STSong", "Songti SC", serif;
+  font-size: 58rpx;
+  line-height: 1.08;
+  letter-spacing: 3rpx;
+  text-shadow: 0 6rpx 18rpx rgba(0, 0, 0, 0.24);
+}
+
+.brand-copy__location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rpx;
+  padding-left: 10rpx;
+}
+
+.brand-copy__location-text {
+  color: rgba(219, 197, 154, 0.9);
+  font-size: 24rpx;
+  line-height: 1;
+  letter-spacing: 1rpx;
+}
+
+.brand-copy__location-arrow {
+  width: 0;
+  height: 0;
+  margin-left: 10rpx;
+  border-left: 7rpx solid transparent;
+  border-right: 7rpx solid transparent;
+  border-top: 10rpx solid rgba(219, 197, 154, 0.72);
+}
+
+.capsule {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 170rpx;
+  padding: 0 18rpx;
+  border: 2rpx solid rgba(255, 255, 255, 0.2);
+  border-radius: 999rpx;
+  background: rgba(20, 48, 34, 0.42);
+  box-shadow: inset 0 0 18rpx rgba(255, 255, 255, 0.05);
+}
+
+.capsule__more {
+  display: flex;
+  align-items: center;
+}
+
+.capsule__dot {
+  width: 8rpx;
+  height: 8rpx;
+  margin-right: 8rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.capsule__dot:last-child {
+  margin-right: 0;
+}
+
+.capsule__divider {
+  width: 1rpx;
+  height: 28rpx;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.capsule__ring {
+  position: relative;
+  width: 30rpx;
+  height: 30rpx;
+  border: 4rpx solid rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+}
+
+.capsule__ring-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.hero {
+  position: absolute;
+  left: 54rpx;
+  z-index: 3;
+}
+
+.hero__title {
+  display: block;
+  color: #ceb089;
+  font-family: "STSong", "Songti SC", serif;
+  font-size: 76rpx;
+  line-height: 1.14;
+  letter-spacing: 5rpx;
+  text-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.24);
+}
+
+.footer-stack {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+}
+
+.footer-stack__inner {
+  padding: 0 32rpx;
+}
+
+.quick-actions {
+  display: flex;
+  align-items: stretch;
+}
+
+.action-card {
+  flex: 1;
+  height: 148rpx;
+  padding-top: 22rpx;
+  border: 2rpx solid rgba(235, 218, 181, 0.58);
+  border-radius: 38rpx;
+  background: linear-gradient(180deg, rgba(48, 74, 56, 0.72) 0%, rgba(18, 43, 31, 0.76) 100%);
+  box-shadow:
+    0 0 20rpx rgba(239, 226, 190, 0.25),
+    inset 0 0 18rpx rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.action-card + .action-card {
+  margin-left: 18rpx;
+}
+
+.action-card--active {
+  border-color: rgba(247, 234, 203, 0.95);
+  background: linear-gradient(180deg, #efe1ba 0%, #d4b584 100%);
+  box-shadow:
+    0 0 30rpx rgba(244, 228, 190, 0.42),
+    inset 0 0 16rpx rgba(255, 255, 255, 0.35);
+}
+
+.action-card__icon {
+  width: 58rpx;
+  height: 58rpx;
+  margin: 0 auto 14rpx;
+}
+
+.action-card__icon--schedule {
+  width: 66rpx;
+  height: 66rpx;
+  margin-bottom: 10rpx;
+}
+
+.action-card__icon--member {
+  width: 66rpx;
+  height: 66rpx;
+  margin-bottom: 10rpx;
+}
+
+.action-card__text {
+  color: #dac59c;
+  font-size: 27rpx;
+  line-height: 1.1;
+}
+
+.action-card--active .action-card__text {
+  color: #5e4a30;
+}
+
+.promo-banner {
+  position: relative;
+  height: 188rpx;
+  margin-top: 26rpx;
+}
+
+.promo-banner__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.promo-banner__content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 26rpx 34rpx 26rpx;
+}
+
+.promo-banner__headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.promo-banner__title {
+  color: #5d3c1c;
+  font-family: "STSong", "Songti SC", serif;
+  font-size: 48rpx;
+  line-height: 1;
+  letter-spacing: 3rpx;
+}
+
+.promo-banner__button {
+  position: absolute;
+  left: 28rpx;
+  bottom: 18rpx;
+  width: 184rpx;
+  height: 66rpx;
+}
+
+.promo-banner__button-bg {
+  width: 100%;
+  height: 100%;
+}
+
+.promo-banner__button-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #7c5a3f;
+  font-size: 29rpx;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+}
+
+.tabbar-shell {
+  margin-top: 24rpx;
+  padding: 18rpx 18rpx 12rpx;
+  border-top: 2rpx solid rgba(129, 103, 68, 0.4);
+  background: linear-gradient(180deg, rgba(1, 52, 31, 0.76) 0%, rgba(1, 34, 21, 0.96) 100%);
+  box-shadow: 0 -10rpx 22rpx rgba(0, 0, 0, 0.16);
+}
+
+.tabbar {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+}
+
+.tab-item__icon {
+  width: 44rpx;
+  height: 44rpx;
+  margin: 0 auto 10rpx;
+}
+
+.tab-item__label {
+  color: #988b6b;
+  font-size: 25rpx;
+  line-height: 1;
+}
+
+.tab-item--active .tab-item__label {
+  color: #edd9b0;
+  font-weight: 600;
+}
+
+.home-indicator {
+  width: 126rpx;
+  height: 10rpx;
+  margin: 12rpx auto 12rpx;
+  border-radius: 999rpx;
+  background: rgba(255, 255, 255, 0.92);
+}

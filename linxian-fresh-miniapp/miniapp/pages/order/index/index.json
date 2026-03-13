@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "订单",
-  "usingComponents": {
-    "filter-tabs": "/components/filter-tabs/index",
-    "order-card": "/components/order-card/index",
-    "empty-state": "/components/empty-state/index"
-  }
-}

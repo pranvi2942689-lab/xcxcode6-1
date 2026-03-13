@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "商品列表",
-  "usingComponents": {
-    "filter-tabs": "/components/filter-tabs/index",
-    "goods-card-grid": "/components/goods-card-grid/index",
-    "empty-state": "/components/empty-state/index"
-  }
-}
